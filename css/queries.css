@@ -1,0 +1,69 @@
+@media (max-width:549px) {
+    .hero {
+        font-size: 30px;
+        padding-top: 100px;
+    }
+    .contenedor .btn {
+        margin-bottom: 80px;
+    }
+    .desktop-menu {
+        text-align: center;
+    }
+}
+@media (min-width:550px) {
+    .contenedor {
+        width: 500px;
+    }
+}
+@media (min-width: 768px) {
+    .contenedor {
+        width: 450px;
+    }
+}
+@media (min-width: 992px) {
+    .contenedor {
+        width: 590px;
+    }
+}
+@media (min-width: 1200px) {
+    .contenedor {
+        width: 590px;
+    }
+}
+@media screen and (max-width:768px) {
+    .menu {
+        /*background: #fff;*/
+    }
+    .logo {
+        color: orangered;
+        font-size: 20px; 
+    }
+    .desktop-menu li a {
+        color: orangered;
+    }
+    header .icon-bars {
+        color: #ccc;
+        border-color: #ccc;
+    }
+    .contenedor .boton {
+        margin-bottom: 100px;
+    }
+    .letra {
+        display: block;
+    }
+    .letra-dos {
+        display: block;
+    }
+    .letra p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #main-navigation ul li {
+        display: block;
+    }
+    .img-logo {
+        width: 70px;
+    }
+}

@@ -1,0 +1,179 @@
+/* ------------------------------------------------------------------------------- GENERAL -- */
+* {
+  /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Catamaran", sans-serif; }
+
+a:hover {
+  text-decoration: none; }
+
+.contenedor {
+  margin: 0 auto;
+  box-sizing: border-box; }
+  .contenedor .boton {
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 12px 20px 10px 20px;
+    border: none;
+    background: #2F1B41;
+    margin-bottom: 240px; }
+    .contenedor .boton:hover {
+      background: #BE3144;
+      color: #fff; }
+
+ul {
+  list-style: none; }
+
+h2 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0 15px 0; }
+
+/* -------------------------------------------------------------------------------- HEADER -- */
+header {
+  /*background: url(../img/Black-and-Blue-HD-Background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;*/
+  background: #F05941;
+  color: #fff; }
+
+.logo {
+  display: block;
+  text-align: center;
+  padding: 4px 0; }
+
+.img-logo {
+  width: 50px;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  position: relative;
+  z-index: 1; }
+  .img-logo:hover {
+    transform: rotate(360deg); }
+
+.menu {
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21); }
+
+/* Menu hamburguesa */
+header .icon-bars {
+  color: #000;
+  font-size: 23px;
+  padding: 4px 7px; }
+
+.hamburguesa {
+  border: none;
+  background: none;
+  padding-top: 7px; }
+
+#main-navigation {
+  z-index: 1;
+  position: fixed;
+  right: 10px;
+  margin: 50px 0 0 0; }
+
+#main-navigation ul {
+  background: rgba(0, 0, 0, 0.7);
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px; }
+
+#main-navigation ul a {
+  color: #fff; }
+
+#main-navigation ul a:hover {
+  background: #f05f40;
+  border-radius: 10px; }
+
+/* Menu fijo con javascript */
+.menu-fijo {
+  background: rgba(255, 255, 255, 0.78);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.34); }
+
+.menu-fijo .logo, .menu-fijo ul li a {
+  color: orangered; }
+
+/* Fin Menu fijo con javascript */
+.menu * {
+  margin: 0;
+  font-size: 20px;
+  color: #fff; }
+
+.menu .link-nav:hover {
+  background: #BE3144;
+  color: #fff; }
+
+nav ul {
+  text-align: right;
+  overflow: hidden;
+  /* Limpiamos errores de float */ }
+
+nav ul li {
+  display: inline-block; }
+
+nav ul li a {
+  display: inline-block;
+  /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.2s; }
+
+/* ---------------------------------------------------------------------------------- HERO -- */
+.hero {
+  margin: 0 auto;
+  text-align: center;
+  padding: 210px 0 20px 0;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'Catamaran'; }
+
+.letra {
+  background: #2f1b41;
+  color: #fff;
+  line-height: 60%;
+  display: inline-block;
+  margin: 0;
+  padding: 30px 20px 20px 20px; }
+
+.letra-h {
+  position: relative; }
+
+.letra-o {
+  position: relative;
+  bottom: 16px; }
+
+.letra-l {
+  position: relative; }
+
+.letra-a {
+  position: relative;
+  bottom: 16px; }
+
+hr {
+  width: 35px;
+  margin: 0 auto;
+  border-width: 2px;
+  border-color: #ff4d0b; }
+
+/* -------------------------------------------------------------------------------- FOOTER -- */
+/* ---------------------------------------------------------------------------- END FOOTER -- */
+
+/*# sourceMappingURL=header.css.map */
