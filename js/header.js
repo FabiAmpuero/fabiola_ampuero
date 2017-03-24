@@ -11,7 +11,10 @@ function init() {
     var alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
     
-    menuColor();
+    $("#fill").click(function(){
+        $(".hijo").css("height","500px");
+    })
+    scrollMenu();
 }
 
 function animacion() {
@@ -24,7 +27,6 @@ function animacion() {
 }
 
 function desaparecer() {
-    console.log("oli");
     $("#let_h").fadeOut();
     $("#let_o").fadeOut();
     $("#let_l").fadeOut();
@@ -37,11 +39,32 @@ function nombreIn() {
     $("#nombre").fadeIn();
 }
 
-function menuColor(){
-    /*$(".link-nav").click(function(){
-        //alert($(this).text());
-        $(this).css("border-bottom","6px solid #000");
-    });*/
-    
+function scrollMenu() {
+    // Add scrollspy to <body>
+    $('body').scrollspy({target: "#navbar", offset: 50});   
+
+    // Add smooth scrolling on all links inside the navbar
+    $("nav a").on('click', function(event) {
+        console.log("se hizo click");
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            console.log(this.hash);
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+        }  // End if
+    });
 }
 

@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------- GENERAL -- */
 * {
-    /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
+    outline: 1px solid rgba(255, 0, 0, 0.38);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +8,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 a:hover {
     text-decoration: none;
@@ -214,7 +215,43 @@ hr {
 
 
 /* -------------------------------------------------------------------------------- SKILLS -- */
-
-
+.skills{
+    .padre{
+        position: relative;
+        background: url(../img/clase_efecto.jpeg) no-repeat;
+        background-size: auto;
+        background-position:center center;
+        background-attachment: scroll;
+        height: 500px;
+        
+        img{
+            opacity: 0.5;
+        }
+    }
+    .hijo{
+        position: absolute;
+        height: 0px;
+        overflow: hidden;
+        width: 100%;
+        bottom: 0;
+        transition: all 0.5s;
+    }
+    .hijo:hover{
+        height: 80px;
+    }
+    .rojo{ background: rgba(135, 35, 65, 0.56); height:200px;}
+    .verde{ background: rgba(190, 49, 68, 0.56); height:150px;}
+    .azul{ background: rgba(240, 89, 65, 0.56); height:150px;}
+}
 /* -------------------------------------------------------------------------------- FOOTER -- */
 /* ---------------------------------------------------------------------------- END FOOTER -- */
+
+
+
+
+
+
+
+
+
+

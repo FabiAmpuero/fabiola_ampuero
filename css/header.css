@@ -1,13 +1,14 @@
 /* ------------------------------------------------------------------------------- GENERAL -- */
 * {
-  /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
+  outline: 1px solid rgba(255, 0, 0, 0.38);
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 a:hover {
   text-decoration: none; }
@@ -195,6 +196,34 @@ hr {
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
 /* -------------------------------------------------------------------------------- SKILLS -- */
+.skills .padre {
+  position: relative;
+  background: url(../img/clase_efecto.jpeg) no-repeat;
+  background-size: auto;
+  background-position: center center;
+  background-attachment: scroll;
+  height: 500px; }
+  .skills .padre img {
+    opacity: 0.5; }
+.skills .hijo {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  bottom: 0;
+  transition: all 0.5s; }
+.skills .hijo:hover {
+  height: 80px; }
+.skills .rojo {
+  background: rgba(135, 35, 65, 0.56);
+  height: 200px; }
+.skills .verde {
+  background: rgba(190, 49, 68, 0.56);
+  height: 150px; }
+.skills .azul {
+  background: rgba(240, 89, 65, 0.56);
+  height: 150px; }
+
 /* -------------------------------------------------------------------------------- FOOTER -- */
 /* ---------------------------------------------------------------------------- END FOOTER -- */
 

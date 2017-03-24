@@ -14,46 +14,49 @@
 	<link rel="stylesheet" href="css/queries.css">
 	
 </head>
-<body onload="init()">
+<body data-spy="scroll" onload="init()">
 <!-- -------------------------------------------------------------------------------- HEADER -->
     <header>
         <div class="container-fluid">
-            <div class="row menu">
-                                
-                <div class="col-md-5 col-sm-5 col-xs-0 menu-left">
-                    <nav class="hidden-xs">
-                        <ul class="desktop-menu list-inline text-right">
-                            <li><a class="link-nav" href="#aboutme">ABOUT ME</a></li>
-                            <li><a class="link-nav" href="#skills">SKILLS</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-9">
-                    <ul class="ul-logo"><a class="logo" href="index.html"><img class="img-logo" id="logo-img" src="img/logo_white.png" alt=""></a></ul>
-                </div>
-                <div class="col-md-5 col-sm-5 col-xs-3 menu-right">
-                    <div class="text-left visible-xs">
-                        <button class="hamburguesa" data-toggle="collapse" data-target="#main-navigation"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
+            <div id="navbar">
+                <div class="row menu">  
+                    <div class="col-md-5 col-sm-5 col-xs-0 menu-left">
+                        <nav class="hidden-xs">
+                            <ul class="desktop-menu list-inline text-right">
+                                <li><a class="link-nav" href="#aboutme">ABOUT ME</a></li>
+                                <li><a class="link-nav" href="#skills">SKILLS</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav class="hidden-xs">
-                        <ul class="desktop-menu list-inline text-left">
-                            <li><a class="link-nav" href="#portfolio">PORTFOLIO</a></li>
-                            <li><a class="link-nav" href="#contact">CONTACT</a></li>
-                        </ul>
-                    </nav>
+                    <div class="col-md-2 col-sm-2 col-xs-9">
+                        <ul class="ul-logo"><a class="logo" href="index.html"><img class="img-logo" id="logo-img" src="img/logo_white.png" alt=""></a></ul>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-3 menu-right">
+                        <div class="text-left visible-xs">
+                            <button class="hamburguesa" data-toggle="collapse" data-target="#main-navigation"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
+                        </div>
+                        <nav class="hidden-xs">
+                            <ul class="desktop-menu list-inline text-left">
+                                <li><a class="link-nav" href="#portfolio">PORTFOLIO</a></li>
+                                <li><a class="link-nav" href="#contact">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
+            
+            
 <!-- ---------------------------------------------------------------------- MENU HAMBURGUESA -->
-            <nav class="visible-xs">
-                <div id="main-navigation" class="collapse">
-                    <ul class="mobile-menu text-left">
-                        <li><a href="#aboutme">ABOUT ME</a></li>
-                        <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
+                <nav class="visible-xs">
+                    <div id="main-navigation" class="collapse">
+                        <ul class="mobile-menu text-left">
+                            <li><a href="#aboutme">ABOUT ME</a></li>
+                            <li><a href="#skills">SKILLS</a></li>
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
 <!-- ---------------------------------------------------------------------------------- HERO -->
             <div class="contenedor">
                 <h1 class="hero">
@@ -86,16 +89,31 @@
     </section>
 <!-- --------------------------------------------------------------------------------------- SKILLS -->
 <section class="skills" id="skills">
-        <div class="contenedor">
+        <div class="container">
             <h2>Habilidades</h2>
             <p>Mis conocimientos en desarrollo web.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>A ver</p>
+                    <button id="fill">Fill</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="padre">
+                        <div class="hijo">
+                            <div class="rojo"></div>
+                            <div class="verde"></div>
+                            <div class="azul"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!--<img src="img/clase_efecto.jpeg" alt="">-->
         </div>
     </section>
 <!-- ------------------------------------------------------------------------------------ PORTFOLIO -->
 <section class="portfolio" id="portfolio">
-        <div class="contenedor">
+        <div class="container">
             <h2>Portafolio</h2>
             <p>Mira mis trabajos, son estupendos!</p>
         </div>
@@ -113,6 +131,7 @@
 	<script src="js/main.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>
