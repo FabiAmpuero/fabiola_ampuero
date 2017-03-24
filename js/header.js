@@ -4,8 +4,14 @@ function init() {
     
     var heightWindow = $(window).height();
     $("header").css("height",heightWindow);
+    $("#aboutme").css("height",heightWindow);
+    $("#skills").css("height",heightWindow);
+    $("#portfolio").css("height",heightWindow);
+    $("#contact").css("height",heightWindow);
     var alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
+    
+    menuColor();
 }
 
 function animacion() {
@@ -31,4 +37,11 @@ function nombreIn() {
     $("#nombre").fadeIn();
 }
 
+function menuColor(){
+    /*$(".link-nav").click(function(){
+        //alert($(this).text());
+        $(this).css("border-bottom","6px solid #000");
+    });*/
+    
+}
 

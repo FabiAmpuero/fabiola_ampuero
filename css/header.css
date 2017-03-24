@@ -33,9 +33,23 @@ ul {
 
 h2 {
   margin: 0;
-  color: #fff;
   text-align: center;
-  padding: 80px 0 15px 0; }
+  padding: 93px 0 15px 0;
+  /*font-family: "Josefin Sans";*/
+  font-family: "Playfair Display";
+  font-size: 50px;
+  color: #BE3144; }
+
+h3 {
+  font-family: "Playfair Display";
+  font-size: 30px;
+  color: #BE3144;
+  font-style: italic; }
+
+p {
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: lighter; }
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
@@ -68,7 +82,8 @@ header {
   position: fixed;
   z-index: 1000;
   top: 0;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: Thin;
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21); }
   .menu ul {
@@ -114,7 +129,7 @@ header .icon-bars {
   box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.34); }
 
 .menu-fijo .logo, .menu-fijo ul li a {
-  color: orangered; }
+  color: #BE3144; }
 
 /* Fin Menu fijo con javascript */
 .menu * {
@@ -143,12 +158,11 @@ nav ul {
   margin: 0 auto;
   text-align: center;
   padding: 210px 0 20px 0;
-  font-size: 80px;
   font-weight: bold; }
 
 #nombre {
   /*font-family: "Fredoka One";*/
-  font-family: "Luckiest Guy"; }
+  font-family: "Playfair Display" !important; }
 
 .letra {
   background: #2f1b41;
@@ -156,8 +170,9 @@ nav ul {
   line-height: 60%;
   display: inline-block;
   margin: 0;
-  padding: 30px 20px 20px 20px;
-  font-family: "Luckiest Guy"; }
+  font-size: 80px !important;
+  padding: 25px 25px 35px 25px;
+  font-family: "Playfair Display"; }
 
 .letra-h {
   position: relative; }
@@ -178,10 +193,6 @@ hr {
   border-color: #ff4d0b; }
 
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
-h2 {
-  font-family: "Luckiest Guy";
-  color: red; }
-
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
 /* -------------------------------------------------------------------------------- SKILLS -- */
 /* -------------------------------------------------------------------------------- FOOTER -- */
