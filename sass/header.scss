@@ -8,7 +8,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Catamaran", sans-serif;
 }
 a:hover {
     text-decoration: none;
@@ -51,6 +50,7 @@ header {
     background-attachment: fixed;*/
     background: #F05941;
     color: #fff;
+    height: 300px;
 }
 .logo {
     display: block;
@@ -59,10 +59,12 @@ header {
 }
 
 .img-logo{
-    width: 50px;
+    width: 70px;
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
     z-index: 1;
     
     &:hover{
@@ -71,13 +73,20 @@ header {
 }
 
 .menu {
-    background: rgba(0, 0, 0, 0.05);
     width: 100%;
     position: fixed;
     z-index: 1000;
     top: 0;
+    font-family: "Catamaran", sans-serif;
+    background: rgba(0, 0, 0, 0.05);
     box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21);
+    
+    ul{
+        margin: 0;
+    }
+    
 }
+
 /* Menu hamburguesa */
 header .icon-bars {
     color: #000;
@@ -122,7 +131,6 @@ header .icon-bars {
 }
 /* Fin Menu fijo con javascript */
 .menu * {
-    margin: 0;
     font-size: 20px;
     color: #fff;
 }
@@ -133,16 +141,17 @@ header .icon-bars {
 nav ul {
     text-align: right;
     overflow: hidden; /* Limpiamos errores de float */
+    & li {
+        display: inline-block;
+        & a {
+            display: inline-block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+    }
 }
-nav ul li {
-    display: inline-block;
-}
-nav ul li a {
-    display: inline-block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-    padding: 20px;
-    text-decoration: none;
-    transition: all 0.2s;
-}
+
 /* ---------------------------------------------------------------------------------- HERO -- */
 .hero {
     margin: 0 auto;
@@ -150,7 +159,10 @@ nav ul li a {
     padding: 210px 0 20px 0;
     font-size: 80px;
     font-weight: bold;
-    font-family: 'Catamaran';
+}
+#nombre {
+    /*font-family: "Fredoka One";*/
+    font-family: "Luckiest Guy";
 }
 .letra{
     background: rgba(47, 27, 65, 1);
@@ -159,20 +171,19 @@ nav ul li a {
     display: inline-block;
     margin: 0;
     padding: 30px 20px 20px 20px;
+    font-family: "Luckiest Guy";
 }
 .letra-h{
     position: relative;
 }
 .letra-o{
     position: relative;
-    bottom: 16px;
 }
 .letra-l{
     position: relative;
 }
 .letra-a{
     position: relative;
-    bottom: 16px;
 }
 hr {
     width: 35px;
@@ -180,9 +191,17 @@ hr {
     border-width: 2px;
     border-color: #ff4d0b;
 }
+/* ------------------------------------------------------------------------------ ABOUT ME -- */
+h2{
+    font-family: "Luckiest Guy";
+    color: red;
+}
 
+/* ----------------------------------------------------------------------------- PORTFOLIO -- */
+
+
+/* -------------------------------------------------------------------------------- SKILLS -- */
 
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
-
 /* ---------------------------------------------------------------------------- END FOOTER -- */
