@@ -150,6 +150,13 @@ $('#close').click(function(e){
 
 
 
+// CONTACTOO
+
+$('#btn-contact').click(function () {
+    console.log($(this).parent());
+  $(this).parent().toggleClass('expand-contact');     
+});
+
 
 
 
