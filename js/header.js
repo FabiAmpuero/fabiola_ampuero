@@ -79,19 +79,50 @@ function fillSkills() {
 // PORTAFOLIO
 $('.expand').click(function(){
     var portid = $(this).attr('rel');
+    console.log(portid);
     $('html,body').animate({scrollTop: $('#showcase').offset().top-100}, 500, 'easeInOutQuad');
-    if (screen.width <= 767 || window.innerWidth <=767) {
-    $('#showcase').animate({opacity:'1', height:'650px'},500).css('display', 'block');
-    $('#inner-showcase').css('display', 'block');
-        $('#s-content').load('portfolio.html #'+portid);
-
+    
+    for(var i in portafolios){
+        console.log(portafolios[i].name);
+        if(portafolios[i].name==portid){
+            var id = portafolios[i];
+            console.log(id);
+        }
     }
+    
+    
+    if (screen.width <= 767 || window.innerWidth <=767) {
+        $('#showcase').animate({opacity:'1', height:'650px'},500).css('display', 'block');
+        $('#inner-showcase').css('display', 'block');
+        
+        var html = 
+        '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
+        '<div class="col-md-7">'+
+        '<img class="work-img img-responsive" src="img/'+portid+'.jpg">'+
+        '</div>'+
+        '<div class="col-md-5">'+
+        '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button" href="'+id.url+'" target="blank_"></a>'+
+        '</div>'+
+        '</div>';
+        $('#s-content').html(html);
+    }
+        
     else{
         $('#showcase').animate({opacity:'1', height:'500px'},500).css('display', 'block');
         $('#inner-showcase').css('display', 'block');
-        $('#s-content').load('portfolio.html #'+portid, function(){
-        });
+        
+        var html = 
+        '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
+        '<div class="col-md-7">'+
+        '<img class="work-img img-responsive" src="img/'+portid+'.jpg">'+
+        '</div>'+
+        '<div class="col-md-5">'+
+        '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button" href="'+id.url+'" target="blank_"></a>'+
+        '</div>'+
+        '</div>';
+        $('#s-content').html(html);
         $('#s-content').hide().fadeIn(1000);}
+    
 });
 
 $('.portfolio-item').click(function(){
@@ -114,6 +145,13 @@ $('#close').click(function(e){
     $('html,body').animate({
         scrollTop: $('#portfolio').offset().top},200);
 });
+
+
+
+
+
+
+
 
 
 

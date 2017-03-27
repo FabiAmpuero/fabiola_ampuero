@@ -54,11 +54,10 @@ p {
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-  /*background: url(../img/Black-and-Blue-HD-Background.jpg) no-repeat;
+  background: url(../img/wall8.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;*/
-  background: #F05941;
+  background-attachment: fixed;
   color: #fff;
   height: 300px; }
 
@@ -270,6 +269,11 @@ hr {
     -ms-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out; }
+  .portfolio-item img {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    left: -85px; }
 
 #close {
   position: absolute;
