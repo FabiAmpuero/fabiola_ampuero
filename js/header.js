@@ -6,7 +6,7 @@ function init() {
     $("header").css("height",heightWindow);
     $("#aboutme").css("height",heightWindow);
     $("#skills").css("height",heightWindow);
-    $("#portfolio").css("height",heightWindow);
+    //$("#portfolio").css("height",heightWindow);
     $("#contact").css("height",heightWindow);
     var alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
@@ -15,7 +15,7 @@ function init() {
     /*$("#fill").click(function(){
         $(".hijo").slideToggle("slow");
     });*/
-    scrollMenu();
+    //scrollMenu();
 }
 
 function animacion() {
@@ -40,7 +40,8 @@ function nombreIn() {
     $("#nombre").fadeIn();
 }
 
-function scrollMenu() {
+// ****************************************** FUNCION MENU
+/*function scrollMenu() {
     // Add scrollspy to <body>
     $('body').scrollspy({target: "#navbar", offset: 50});   
 
@@ -67,8 +68,52 @@ function scrollMenu() {
             });
         }  // End if
     });
-}
+}*/
 
 function fillSkills() {
     $(".hijo").css("height","500px");
 }
+
+
+
+// PORTAFOLIO
+$('.expand').click(function(){
+    var portid = $(this).attr('rel');
+    $('html,body').animate({scrollTop: $('#showcase').offset().top-100}, 500, 'easeInOutQuad');
+    if (screen.width <= 767 || window.innerWidth <=767) {
+    $('#showcase').animate({opacity:'1', height:'650px'},500).css('display', 'block');
+    $('#inner-showcase').css('display', 'block');
+        $('#s-content').load('portfolio.html #'+portid);
+
+    }
+    else{
+        $('#showcase').animate({opacity:'1', height:'500px'},500).css('display', 'block');
+        $('#inner-showcase').css('display', 'block');
+        $('#s-content').load('portfolio.html #'+portid, function(){
+        });
+        $('#s-content').hide().fadeIn(1000);}
+});
+
+$('.portfolio-item').click(function(){
+    removeclick();
+    $(this).addClass("clicked");  
+});
+
+function removeclick(){	
+    if ($('.portfolio-item').hasClass('clicked')){
+        $('.portfolio-item').removeClass("clicked");
+    }	
+}
+
+$('#close').click(function(e){
+    e.preventDefault();
+    removeclick();
+    $('#showcase').animate({opacity:'0', height:'0px'}, 500)
+    $('#s-content').empty();
+    $('#inner-showcase').css('height', '1px');
+    $('html,body').animate({
+        scrollTop: $('#portfolio').offset().top},200);
+});
+
+
+
