@@ -297,7 +297,7 @@ box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
 
 
 // BOTON DE CERRAR
-#close {position:absolute; top:-10px; right:15px; font-size: 50px; background: #000; color: #fff; padding: 10px;}
+#close {position:absolute; top:-10px; right:15px; font-size: 50px; background: #000; color: #fff; padding: 10px; z-index: 1000;}
 #close:hover { opacity:0.7; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";}
 
 .clicked{
@@ -332,20 +332,22 @@ transform: scale(1.05);
 -o-transition: all 0.4s ease-out;
 transition: all 0.4s ease-out;}
 
-.visit-button {padding:15px 0px;color:#fff; display:block; font-size:16px; background:#0e7f7b; margin:30px 0px; text-transform: uppercase; width:80%;
+.visit-button {padding:15px 0px;color:#fff; display:block; font-size:16px; background:#F05941; margin:30px 0px; text-transform: uppercase; width:80%; 
 -webkit-transition: background 0.7s ease-in;
 -moz-transition: background 0.7s ease-in;
 -ms-transition: background 0.7s ease-in;
 -o-transition: background 0.7s ease-in;
 transition: background 0.7s ease-in;
-
+    span {
+        font-family: "lato";
+    }
 }
 
-.visit-button:before{ background: #109f9a url(../img/2.jpg) center center no-repeat; content: ""; padding: 12px 25px; margin-right: 15px; box-shadow: 2px 0px 2px #0a5956;}
+.visit-button:before{ /*background: #109f9a url(../img/logo_white.png) center center no-repeat; background-size: contain; content: "";*/ padding: 12px 25px; margin-right: 15px; box-shadow: 2px 0px 2px #ed5942;}
 
 
 .visit-button:hover{
-background: #109f9a; color:#fff; 
+background: #bf3f2b; color:#fff; 
 -webkit-transition: background 0.7s ease-out;
 -moz-transition: background 0.7s ease-out;
 -ms-transition: background 0.7s ease-out;
