@@ -1,98 +1,239 @@
-$body-bg: #FAFAFA;
-//Other pretty primary colors: E91E63 FF5722
-$primary-col: #03A9F4;
-$accent-col: #FFC400;
-$accent-fallback: #FFD740;
+$primary-col: #be3144;
 
-$font-stack: Roboto, sans-serif;
+$font-stack: "Lato", sans-serif;
 $easer: cubic-bezier(0.4, 0, 0.2, 1);
 
-
-
-
-
 .button{
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  font-size: 20px;
-  line-height: 60px;
-  font-weight: bold;
-  transform: rotate(45deg);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: bold;
+    transform: rotate(45deg);
 
-  transition: all 0.7s $easer;
+    transition: all 0.7s $easer;
 }
 .expand-contact .button {
-  transform: rotate(630deg);
+    transform: rotate(630deg);
 
-  transition: all 0.5s $easer;
+    transition: all 0.5s $easer;
 }
 
 .contact .contact-container {
-   
-  background-color: $primary-col;
-
-  border-radius: 50%;
-  width: 60px;
-  max-width: 60px;
-  height: 60px;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  overflow: hidden;
-
-  transition: all 0.2s 0.45s,
+    background-color: $primary-col;
+    border-radius: 50%;
+    width: 60px;
+    max-width: 60px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow: hidden;
+    transition: all 0.2s 0.45s,
               height 0.2s $easer 0.25s, 
               max-width 0.2s $easer 0.35s, 
               width 0.2s $easer 0.35s;
 }
 .contact .contact-container.expand-contact {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
-  border-radius: 0;
-  width: 80%;
-  height: 500px;
-  max-width: 600px;
-  padding: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
+    border-radius: 0;
+    width: 80%;
+    height: 650px;
+    max-width: 600px;
+    padding: 0;
 
-  transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
+    transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
 }
 
 .contact .content {
-  transform: translateY(100%);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  text-align: left;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: left;
 
-  transition: transform 0.2s $easer, opacity 0.2s 0.2s;
+    transition: transform 0.2s $easer, opacity 0.2s 0.2s;
 }
 .contact .expand-contact .content {
-  transform: translateY(0px);
-  opacity: 1;
-  transition: transform 0.7s $easer 0.05s, opacity 0s;
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform 0.7s $easer 0.05s, opacity 0s;
 }
 
 .contact .content .head {
-  padding: 0 0 20px 0;
+    padding: 0 0 20px 0;
 }
 .contact .content .body {
-  color: #000;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  padding: 10px 0;
-  box-sizing: border-box;
+    color: #000;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
 .contact {
     margin-top: 50px;
     .contact-container{
-        
-        margin: 0 auto;
-        div{
-           margin-top: 50px; 
+        margin: 40px auto;
+    }
+    
+    #form-main{
+        width:100%;
+        float:left;
+        padding-top:30px;
+    }
+
+    #form-div {
+        background-color:#3c3c3c;
+        padding-left:35px;
+        padding-right:35px;
+        padding-top:35px;
+        padding-bottom:50px;
+        width: 450px;
+        float: left;
+        left: 50%;
+        position: absolute;
+        margin-left: -223px;
+    }
+
+    .feedback-input {
+        opacity:0.9;
+        color:#0493bd;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight:400;
+        font-size: 18px;
+        border-radius: 0;
+        line-height: 22px;
+        background-color: #fbfbfb;
+        border: 3px solid #fbfbfb;
+        padding: 13px 13px 13px 54px;
+        margin-bottom: 10px;
+        width:100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .feedback-input:focus{
+        background: #fff;
+        box-shadow: 0;
+        border: 3px solid #3498db;
+        color: #3498db;
+        outline: none;
+      padding: 13px 13px 13px 54px;
+    }
+
+    .focused{
+        color:#30aed6;
+        border:#30aed6 solid 3px;
+    }
+
+    /* Icons ---------------------------------- */
+    #name{
+        background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    #name:focus{
+        background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+        background-size: 30px 30px;
+        background-position: 8px 5px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    #email{
+        background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    #email:focus{
+        background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+        background-size: 30px 30px;
+      background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    #comment{
+        background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        line-height: 150%;
+    }
+
+    input:hover, textarea:hover,
+    input:focus, textarea:focus {
+        background-color:white;
+    }
+
+    #button-blue{
+        font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+        float:left;
+        width: 100%;
+        border: #fbfbfb solid 4px;
+        cursor:pointer;
+        background-color: #F05941;
+        color:white;
+        font-size:24px;
+        padding-top:22px;
+        padding-bottom:22px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    #button-blue:hover{
+        background-color: rgba(0,0,0,0);
+        color: #872341;
+    }
+
+    .submit:hover {
+        color: #F05941;
+    }
+
+    .ease {
+      border-top:3px #3c3c3c solid;
+        width: 0px;
+        height: 76px;
+        background-color: #fbfbfb;
+        -webkit-transition: .3s ease;
+        -moz-transition: .3s ease;
+        -o-transition: .3s ease;
+        -ms-transition: .3s ease;
+        transition: .3s ease;
+    }
+
+    .submit:hover .ease{
+      width:100%;
+      background-color:white;
+    }
+
+    @media only screen and (max-width: 580px) {
+        #form-div{
+            left: 3%;
+            margin-right: 3%;
+            width: 94%;
+            margin-left: 0;
+            padding-left: 3%;
+            padding-right: 3%;
         }
     }
+    
+    
+    
 }

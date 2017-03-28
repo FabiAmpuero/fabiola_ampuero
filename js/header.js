@@ -1,14 +1,11 @@
 function init() {
     
-    anime = setInterval(animacion,1000);
+    anime = setInterval(animacion,500);
     
     var heightWindow = $(window).height();
     $("header").css("height",heightWindow);
-    $("#aboutme").css("height",heightWindow);
-    $("#skills").css("height",heightWindow);
-    //$("#portfolio").css("height",heightWindow);
-    $("#contact").css("height",heightWindow);
-    var alto = heightWindow-100;
+    $("#contact").css("height",heightWindow+200);
+    alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
     
     $("#fill").click(fillSkills);
@@ -24,7 +21,7 @@ function animacion() {
     $("#let_l").animate({display: 'block'});
     $("#let_a").animate({bottom: '16px'});
     clearInterval(anime);
-    clear = setInterval(desaparecer,3000);
+    clear = setInterval(desaparecer,1500);
 }
 
 function desaparecer() {
@@ -32,12 +29,15 @@ function desaparecer() {
     $("#let_o").fadeOut();
     $("#let_l").fadeOut();
     $("#let_a").fadeOut();
+    
     clearInterval(clear);
-    nombre = setInterval(nombreIn,1000);
+    nombre = setInterval(nombreIn,400);
 }
 
 function nombreIn() {
+    $(".hero").css("padding-top", alto/3);
     $("#nombre").fadeIn();
+    animacion();
 }
 
 // ****************************************** FUNCION MENU
@@ -71,7 +71,7 @@ function nombreIn() {
 }*/
 
 function fillSkills() {
-    $(".hijo").css("height","500px");
+    $(".hijo").css("height","600px");
 }
 
 

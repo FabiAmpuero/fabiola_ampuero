@@ -45,7 +45,8 @@ h3 {
   font-family: "Playfair Display";
   font-size: 30px;
   color: #BE3144;
-  font-style: italic; }
+  font-style: italic;
+  font-weight: bold; }
 
 p {
   font-family: "Lato";
@@ -54,7 +55,7 @@ p {
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-  background: url(../img/wall8.jpg) no-repeat;
+  background: url(../img/wall6.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -88,17 +89,20 @@ header {
   box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21); }
   .menu ul {
     margin: 0; }
+  .menu * {
+    font-size: 20px;
+    color: #fff; }
 
 /* Menu hamburguesa */
-header .icon-bars {
-  color: #000;
-  font-size: 23px;
-  padding: 4px 7px; }
-
 .hamburguesa {
   border: none;
   background: none;
   padding-top: 7px; }
+
+.glyphicon-menu-hamburger {
+  color: #F05941;
+  font-size: 40px;
+  right: -21px; }
 
 #main-navigation {
   z-index: 1;
@@ -132,10 +136,6 @@ header .icon-bars {
   color: #BE3144; }
 
 /* Fin Menu fijo con javascript */
-.menu * {
-  font-size: 20px;
-  color: #fff; }
-
 .menu .link-nav:hover {
   background: #BE3144;
   color: #fff; }
@@ -157,12 +157,15 @@ nav ul {
 .hero {
   margin: 0 auto;
   text-align: center;
-  padding: 210px 0 20px 0;
+  padding: 238px 0 20px 0;
   font-weight: bold; }
 
 #nombre {
   /*font-family: "Fredoka One";*/
-  font-family: "Playfair Display" !important; }
+  font-family: "Playfair Display" !important;
+  margin-top: 0;
+  background: rgba(0, 0, 0, 0.62);
+  padding: 100px; }
 
 .letra {
   background: #2f1b41;
@@ -170,7 +173,7 @@ nav ul {
   line-height: 60%;
   display: inline-block;
   margin: 0;
-  font-size: 80px !important;
+  font-size: 80px;
   padding: 25px 25px 35px 25px;
   font-family: "Playfair Display"; }
 
@@ -193,35 +196,88 @@ hr {
   border-color: #ff4d0b; }
 
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
+.aboutme {
+  /*background: url(../img/rocas.jpeg) no-repeat;
+  background-size: cover;
+  background-position:top top;
+  background-attachment: fixed;*/
+  padding-bottom: 100px; }
+
+.container-aboutme {
+  height: 580px; }
+  .container-aboutme .who {
+    background: rgba(0, 0, 0, 0.31);
+    color: #fff;
+    padding: 15px 35px 30px 35px; }
+    .container-aboutme .who p {
+      font-size: 18px; }
+
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
 /* -------------------------------------------------------------------------------- SKILLS -- */
-.skills .padre {
-  position: relative;
-  background: url(../img/clase_efecto.jpeg) no-repeat;
-  background-size: auto;
-  background-position: center center;
-  background-attachment: scroll;
-  height: 500px; }
-  .skills .padre img {
-    opacity: 0.5; }
-.skills .hijo {
-  position: absolute;
-  height: 0px;
-  overflow: hidden;
-  width: 100%;
-  bottom: 0;
-  transition: all 0.5s; }
-.skills .hijo:hover {
-  height: 80px; }
-.skills .rojo {
-  background: rgba(135, 35, 65, 0.56);
-  height: 200px; }
-.skills .verde {
-  background: rgba(190, 49, 68, 0.56);
-  height: 150px; }
-.skills .azul {
-  background: rgba(240, 89, 65, 0.56);
-  height: 150px; }
+.skills {
+  /*background: url(../img/wall11.jpg) no-repeat;
+  background-size: cover;
+  background-position:center center;
+  background-attachment: fixed;*/
+  padding-bottom: 100px; }
+  .skills #fill {
+    background: #F05941;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff; }
+  .skills .padre {
+    position: relative;
+    background: url(../img/clase_efecto.jpeg) no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 600px; }
+    .skills .padre img {
+      opacity: 0.5; }
+  .skills .hijo {
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+    transition: all 0.8s; }
+    .skills .hijo * {
+      font-size: 25px;
+      color: #fff; }
+  .skills .hijo:hover {
+    height: 80px; }
+  .skills .html {
+    background: rgba(47, 27, 65, 0.55);
+    height: 130px;
+    padding: 45px; }
+  .skills .css {
+    background: rgba(135, 35, 65, 0.55);
+    height: 120px;
+    padding: 39px; }
+  .skills .js {
+    background: rgba(190, 49, 68, 0.55);
+    height: 80px;
+    padding: 20px; }
+  .skills .bootstrap {
+    background: rgba(240, 89, 65, 0.55);
+    height: 90px;
+    padding: 25px; }
+  .skills .jquery {
+    background: rgba(174, 175, 122, 0.55);
+    height: 90px;
+    padding: 25px; }
+  .skills .ajax {
+    background: rgba(54, 209, 196, 0.55);
+    height: 20px;
+    line-height: 17px; }
+  .skills .angular {
+    background: rgba(220, 55, 55, 0.55);
+    height: 20px;
+    line-height: 19px; }
+  .skills .fun {
+    background: rgba(99, 10, 16, 0.55);
+    height: 50px;
+    line-height: 45px; }
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
 /* ---------------------------------------------------------------------------- END FOOTER -- */
@@ -251,10 +307,10 @@ hr {
   animation: vroum 1.5s ease-in-out; }
 
 .portfolio-item {
-  height: 190px;
-  width: 230px;
+  height: 195px;
+  width: 349x;
   float: left;
-  margin: 20px;
+  margin: 15px;
   border: 1px solid #737373;
   padding: 10px;
   -webkit-transition: background 1s ease-out;
@@ -273,7 +329,8 @@ hr {
     margin: 0 auto;
     position: relative;
     display: inline-block;
-    left: -85px; }
+    left: -49px;
+    width: 400px; }
 
 #close {
   position: absolute;

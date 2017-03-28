@@ -50,6 +50,7 @@ h3 {
     font-size: 30px;
     color: #BE3144;
     font-style: italic;
+    font-weight: bold;
 }
 p {
     font-family: "Lato";
@@ -59,7 +60,7 @@ p {
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-    background: url(../img/wall8.jpg) no-repeat;
+    background: url(../img/wall6.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -100,19 +101,25 @@ header {
     ul{
         margin: 0;
     }
+    * {
+    font-size: 20px;
+    color: #fff;
+}
     
 }
 
 /* Menu hamburguesa */
-header .icon-bars {
-    color: #000;
-    font-size: 23px;
-    padding: 4px 7px;
-}
+
 .hamburguesa {
     border: none;
     background: none;
     padding-top: 7px;
+}
+// ICONOS
+.glyphicon-menu-hamburger {
+    color: #F05941;
+    font-size: 40px;
+    right: -21px;
 }
 #main-navigation {
     z-index: 1;
@@ -146,10 +153,7 @@ header .icon-bars {
     color: #BE3144;
 }
 /* Fin Menu fijo con javascript */
-.menu * {
-    font-size: 20px;
-    color: #fff;
-}
+
 .menu .link-nav:hover {
     background: #BE3144;
     color: #fff;
@@ -172,13 +176,15 @@ nav ul {
 .hero {
     margin: 0 auto;
     text-align: center;
-    padding: 210px 0 20px 0;
-    
+    padding: 238px 0 20px 0;
     font-weight: bold;
 }
 #nombre {
     /*font-family: "Fredoka One";*/
     font-family: "Playfair Display" !important;
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.62);
+    padding: 100px;
 }
 .letra{
     background: rgba(47, 27, 65, 1);
@@ -186,7 +192,7 @@ nav ul {
     line-height: 60%;
     display: inline-block;
     margin: 0;
-    font-size: 80px !important;
+    font-size: 80px;
     padding: 25px 25px 35px 25px;
     font-family: "Playfair Display";
 }
@@ -209,20 +215,49 @@ hr {
     border-color: #ff4d0b;
 }
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
-
+.aboutme {
+    /*background: url(../img/rocas.jpeg) no-repeat;
+    background-size: cover;
+    background-position:top top;
+    background-attachment: fixed;*/
+    padding-bottom: 100px;
+}
+.container-aboutme {
+    height: 580px;
+    .who{
+        background: rgba(0, 0, 0, 0.31);
+        color: #fff;
+        padding: 15px 35px 30px 35px;
+        p{
+            font-size: 18px;
+        }
+    }
+}
 
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
 
 
 /* -------------------------------------------------------------------------------- SKILLS -- */
+
 .skills{
+    /*background: url(../img/wall11.jpg) no-repeat;
+    background-size: cover;
+    background-position:center center;
+    background-attachment: fixed;*/
+    padding-bottom: 100px;
+    #fill {
+        background: #F05941;
+        padding: 15px;
+        font-size: 20px;
+        color: #fff;
+    }
     .padre{
         position: relative;
         background: url(../img/clase_efecto.jpeg) no-repeat;
         background-size: auto;
         background-position:center center;
         background-attachment: scroll;
-        height: 500px;
+        height: 600px;
         
         img{
             opacity: 0.5;
@@ -234,15 +269,25 @@ hr {
         overflow: hidden;
         width: 100%;
         bottom: 0;
-        transition: all 0.5s;
+        transition: all 0.8s;
+        * {
+            font-size: 25px;
+            color: #fff;
+        }
     }
     .hijo:hover{
         height: 80px;
     }
-    .rojo{ background: rgba(135, 35, 65, 0.56); height:200px;}
-    .verde{ background: rgba(190, 49, 68, 0.56); height:150px;}
-    .azul{ background: rgba(240, 89, 65, 0.56); height:150px;}
+    .html{ background: rgba(47, 27, 65, 0.55); height:130px; padding: 45px;}
+    .css{ background: rgba(135, 35, 65, 0.55); height:120px; padding: 39px;}
+    .js{ background: rgba(190, 49, 68, 0.55); height:80px; padding: 20px;}
+    .bootstrap{ background: rgba(240, 89, 65, 0.55); height:90px; padding: 25px;}
+    .jquery{ background: rgba(174, 175, 122, 0.55); height:90px; padding: 25px;}
+    .ajax{ background: rgba(54, 209, 196, 0.55); height:20px; line-height: 17px;}
+    .angular{ background: rgba(220, 55, 55, 0.55); height:20px; line-height: 19px;}
+    .fun{ background: rgba(99, 10, 16, 0.55); height:50px; line-height: 45px;}
 }
+
 /* -------------------------------------------------------------------------------- FOOTER -- */
 
 /* ---------------------------------------------------------------------------- END FOOTER -- */
@@ -254,15 +299,23 @@ hr {
 ----------------------------------------- */
 
 
-#showcase{opacity:0; padding:10px 0; border-top:1px solid #8e8e8e; border-bottom:1px solid #8e8e8e; margin-top:70px; }
-#inner-showcase {
-background: url(../img/wall8.jpg) no-repeat; background-attachment: fixed; background-size: cover; min-height:480px; display:none;
--webkit-box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
--moz-box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
-box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
+#showcase {
+    opacity:0; 
+    padding:10px 0; 
+    border-top:1px solid #8e8e8e; 
+    border-bottom:1px solid #8e8e8e; 
+    margin-top:70px; 
 }
-
-//#vespa{ background:url(../img/2.jpg) no-repeat; width:300px; height:150px; position:absolute; right:0; top:333px;}
+#inner-showcase {
+background: url(../img/wall8.jpg) no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    min-height:480px; 
+    display:none;
+    -webkit-box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
+}
 
 .animated { 
     -webkit-animation: vroum 1.5s ease-in-out; 
@@ -271,8 +324,13 @@ box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
 }
 
 
-.portfolio-item { 
-    height:190px; width:230px; float:left; margin:20px; border: 1px solid #737373; padding:10px;
+.portfolio-item {
+    height:195px; 
+    width:349x; 
+    float:left;
+    margin:15px; 
+    border: 1px solid #737373; 
+    padding:10px;
     -webkit-transition: background 1s ease-out;
     -moz-transition: background 1s ease-out;
     -ms-transition: background 1s ease-out;
@@ -292,7 +350,8 @@ box-shadow: inset 1px 5px 5px 3px rgba(0,0,0,0.5);
         margin: 0 auto;
         position: relative;
         display: inline-block;
-        left: -85px;
+        left: -49px;
+        width: 400px;
     }
 }
 

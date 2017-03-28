@@ -31,32 +31,7 @@
     }
 }
 @media screen and (max-width:768px) {
-    .menu {
-        /*background: #fff;*/
-    }
-    .logo {
-        color: orangered;
-        font-size: 20px; 
-    }
-    .desktop-menu li a {
-        color: orangered;
-    }
-    header .icon-bars {
-        color: #ccc;
-        border-color: #ccc;
-    }
-    .contenedor .boton {
-        margin-bottom: 100px;
-    }
-    .letra {
-        display: block;
-    }
-    .letra-dos {
-        display: block;
-    }
-    .letra p {
-        display: block;
-    }
+    
 }
 
 @media screen and (max-width:450px) {
@@ -65,5 +40,16 @@
     }
     .img-logo {
         width: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: 10px;
+    }
+    .letra {
+        font-size: 40px;
+        padding: 10px;
+    }
+    .container-aboutme .who {
+        right: 0;
+        margin: 0 15px;
     }
 }
