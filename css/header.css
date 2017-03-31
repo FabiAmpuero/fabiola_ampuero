@@ -55,7 +55,7 @@ p {
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-  background: url(../img/wall6.jpg) no-repeat;
+  background: url(../img/wall1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -85,12 +85,12 @@ header {
   top: 0;
   font-family: "Josefin Sans", sans-serif;
   font-weight: Thin;
-  background: rgba(0, 0, 0, 0.05);
-  box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21); }
+  /*background: rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21);*/ }
   .menu ul {
     margin: 0; }
   .menu * {
-    font-size: 20px;
+    font-size: 17px;
     color: #fff; }
 
 /* Menu hamburguesa */
@@ -149,7 +149,7 @@ nav ul {
     nav ul li a {
       display: inline-block;
       /* Convertimos los elementos a en elementos bloque para manipular el padding */
-      padding: 20px;
+      padding: 10px;
       text-decoration: none;
       transition: all 0.2s; }
 
@@ -162,10 +162,10 @@ nav ul {
 
 #nombre {
   /*font-family: "Fredoka One";*/
-  font-family: "Playfair Display" !important;
+  font-family: "Dancing Script" !important;
   margin-top: 0;
-  background: rgba(0, 0, 0, 0.62);
-  padding: 100px; }
+  padding: 100px;
+  font-size: 56px; }
 
 .letra {
   background: #2f1b41;
