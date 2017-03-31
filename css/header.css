@@ -157,7 +157,7 @@ nav ul {
 .hero {
   margin: 0 auto;
   text-align: center;
-  padding: 238px 0 20px 0;
+  padding-top: 238px;
   font-weight: bold; }
 
 #nombre {

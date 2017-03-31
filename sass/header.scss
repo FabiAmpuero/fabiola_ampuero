@@ -1,5 +1,14 @@
 /* ------------------------------------------------------------------------------- GENERAL -- */
-$color-one: red;
+$color-one: #216a5c;
+$color-one: #19695f;
+$color-one: #2b7862;
+$color-one: #44d2a9;
+$color-one: #023241;
+$color-one: #010310;
+$color-one: #658b8d;
+$color-one: #032e3a;
+$color-one: #00061d;
+
 * {
     /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
     margin: 0;
@@ -177,7 +186,7 @@ nav ul {
 .hero {
     margin: 0 auto;
     text-align: center;
-    padding: 238px 0 20px 0;
+    padding-top: 238px;
     font-weight: bold;
 }
 #nombre {
