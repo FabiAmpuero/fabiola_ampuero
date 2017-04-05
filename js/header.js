@@ -20,6 +20,7 @@ function init() {
 	});
     
     var heightWindow = $(window).height();
+    var widthWindow = $(window).width();
     $("header").css("height",heightWindow);
     $(".fondo").css("height",heightWindow);
     $("#contact").css("height",heightWindow+200);
@@ -28,9 +29,15 @@ function init() {
     
     $("#fill").click(fillSkills);
     
-    console.log($("#portfolio").height());
-    console.log($(window).scrollTop());
-    console.log(heightWindow);
+    logoSkill(widthWindow);
+}
+
+function logoSkill(_width) {
+    console.log(_width);
+    if(_width<=500){
+        $(".logo-skill").addClass("img-responsive");
+        $(".hijo").css("width","100%");
+        }
 }
 
 function animacion() {
@@ -58,35 +65,6 @@ function nombreIn() {
     animacion();
 }
 
-// ****************************************** FUNCION MENU
-/*function scrollMenu() {
-    // Add scrollspy to <body>
-    $('body').scrollspy({target: "#navbar", offset: 50});   
-
-    // Add smooth scrolling on all links inside the navbar
-    $("nav a").on('click', function(event) {
-        console.log("se hizo click");
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            console.log(this.hash);
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-            scrollTop: $(hash).offset().top
-            }, 800, function(){
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-            });
-        }  // End if
-    });
-}*/
 
 function fillSkills() {
     $(".hijo").css("height","500px");

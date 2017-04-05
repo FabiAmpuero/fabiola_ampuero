@@ -59,13 +59,16 @@ header {
 @keyframes fabi {
   0%, 32% {
     background: url(../img/wsbf12-1.jpg) no-repeat;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    background-size: cover; }
   35%, 65% {
     background: url(../img/wsbf13-1-1.jpg) no-repeat;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    background-size: cover; }
   68%, 100% {
     background: url(../img/wsbf17-2.jpg) no-repeat;
-    background-attachment: fixed; } }
+    background-attachment: fixed;
+    background-size: cover; } }
 .fondo {
   background: rgba(133, 78, 83, 0.49) !important; }
 
@@ -328,7 +331,7 @@ hr {
 
 .thumb {
   overflow: hidden;
-  background: url(../img/2.jpg) repeat;
+  background: url(../img/wall9.jpg) repeat;
   height: 100%;
   width: 100%;
   text-align: center; }
