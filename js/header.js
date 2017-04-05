@@ -9,6 +9,7 @@ function init() {
             $(".a-portfolio").html("PORTAFOLIO");
             $(".a-contact").html("CONTACTO");
             $(".navbar-collapse").css("background-color","rgba(133, 78, 83, 0.77)");
+            $(".navbar-toggle").css("background-color","rgba(133, 78, 83, 0.77)");
 		} else {
             $(".navbar-collapse").css("background-color","rgba(0, 0, 0, 0)");
             $('#logo-img').attr("src","img/logo_white.png");
@@ -30,6 +31,7 @@ function init() {
     $("#fill").click(fillSkills);
     
     logoSkill(widthWindow);
+    menuResponsive(widthWindow);
 }
 
 function logoSkill(_width) {
@@ -37,7 +39,24 @@ function logoSkill(_width) {
     if(_width<=500){
         $(".logo-skill").addClass("img-responsive");
         $(".hijo").css("width","100%");
-        }
+    }
+}
+
+function menuResponsive(_width) {
+    if(_width<768){
+
+
+        $(window).on('scroll', function(){
+            if ( $(window).scrollTop() == 0 ){
+                $(".a-about").html("SOBRE MÍ");
+                $(".a-skill").html("HABILIDADES");
+                $(".a-portfolio").html("PORTAFOLIO");
+                $(".a-contact").html("CONTACTO");
+                $(".navbar-collapse").css("background-color","rgba(133, 78, 83, 0.77)");
+            }
+	    });
+
+    }
 }
 
 function animacion() {
