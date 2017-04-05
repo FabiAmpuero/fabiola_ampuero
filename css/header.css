@@ -264,7 +264,7 @@ hr {
   padding: 10px 0;
   border-top: 1px solid #8e8e8e;
   border-bottom: 1px solid #8e8e8e;
-  margin-top: 70px; }
+  margin-top: 30px; }
 
 #inner-showcase {
   background: url(../img/wall8.jpg) no-repeat;
@@ -308,7 +308,7 @@ hr {
   top: -10px;
   right: 15px;
   font-size: 50px;
-  background: #000;
+  background: rgba(0, 0, 0, 0.63);
   color: #fff;
   padding: 10px;
   z-index: 1000; }

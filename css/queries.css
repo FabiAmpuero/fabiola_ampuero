@@ -1,3 +1,23 @@
+@media screen and (max-width: 1199px) {
+  .portfolio-item img {
+    left: -48px; } }
+@media screen and (max-width: 991px) {
+  #close {
+    top: -36px; }
+
+  .visit-button {
+    display: inline-block;
+    width: 51%;
+    margin: 10px 0; }
+
+  #inner-showcase .row {
+    padding: 0 30px 40px 30px; }
+
+  .portfolio-item img {
+    left: -84px; } }
+@media screen and (max-width: 900px) {
+  .list-portfolio {
+    width: 50%; } }
 @media screen and (max-width: 700px) {
   #nombre {
     padding: 50px 0px; } }
