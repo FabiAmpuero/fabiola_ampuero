@@ -1,18 +1,36 @@
 function init() {
-    
     anime = setInterval(animacion,500);
+    
+    $(window).on('scroll', function(){
+		if ( $(window).scrollTop() > 0 ){
+            $('#logo-img').attr("src","img/logo_purpple.png");
+            $(".a-about").html("SOBRE MÍ");
+            $(".a-skill").html("HABILIDADES");
+            $(".a-portfolio").html("PORTAFOLIO");
+            $(".a-contact").html("CONTACTO");
+            $(".navbar-collapse").css("background-color","rgba(133, 78, 83, 0.77)");
+		} else {
+            $(".navbar-collapse").css("background-color","rgba(0, 0, 0, 0)");
+            $('#logo-img').attr("src","img/logo_white.png");
+            $(".a-about").html("");
+            $(".a-skill").html("");
+            $(".a-portfolio").html("");
+            $(".a-contact").html("");
+		}
+	});
     
     var heightWindow = $(window).height();
     $("header").css("height",heightWindow);
+    $(".fondo").css("height",heightWindow);
     $("#contact").css("height",heightWindow+200);
     alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
     
     $("#fill").click(fillSkills);
-    /*$("#fill").click(function(){
-        $(".hijo").slideToggle("slow");
-    });*/
-    //scrollMenu();
+    
+    console.log($("#portfolio").height());
+    console.log($(window).scrollTop());
+    console.log(heightWindow);
 }
 
 function animacion() {

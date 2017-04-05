@@ -9,8 +9,28 @@ $color-one: #658b8d;
 $color-one: #032e3a;
 $color-one: #00061d;
 
+//combinacion 1
+$color-one: #004b62;
+$color-one: #00828f;
+$color-one: #81c0c5;
+$color-one-fondo: #f2eeed;
+$color-one: #f9b401;
+
+//combinacion 2
+$comb-dos: #854e53;
+$comb-dos: #ba5064;
+$comb-dos-fondo: #b2ebe5;
+$comb-dos: #298d9c;
+$comb-dos: #025d70;
+
+$font-serif: 'Dancing Script';
+$font-sans-serif: 'Lato';
+$font-menu: 'Josefin Sans';
+
+$color-js: rgba(133, 78, 83, 0.77);
+
 * {
-    /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
+    //outline: 1px solid rgba(255, 0, 0, 0.38);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,34 +70,48 @@ h2 {
     margin: 0;
     text-align: center;
     padding: 93px 0 15px 0;
-    /*font-family: "Josefin Sans";*/
-    font-family: "Playfair Display";
+    //font-family: "Josefin Sans";
+    font-family: $font-serif;
     font-size: 50px;
     color: #BE3144;
 }
 h3 {
-    font-family: "Playfair Display";
+    font-family: $font-serif;
     font-size: 30px;
     color: #BE3144;
-    font-style: italic;
     font-weight: bold;
 }
 p {
-    font-family: "Lato";
+    font-family: $font-sans-serif;
     font-size: 20px;
     font-weight: lighter;
 }
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-    background: url(../img/wall1.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    animation: fabi 8s infinite;
+    background-size:cover;
     background-attachment: fixed;
-    //background: #F05941;
-    color: #fff;
-    height: 300px;
 }
+@keyframes fabi {
+    0%, 32% {
+        background: url(../img/wsbf12-1.jpg) no-repeat;
+        background-attachment: fixed;
+    }
+    35%, 65% {
+        background: url(../img/wsbf13-1-1.jpg) no-repeat;
+        background-attachment: fixed;
+    }
+    68%, 100% {
+        background: url(../img/wsbf17-2.jpg) no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+.fondo {
+    background: rgba(133, 78, 83, 0.49) !important;
+}
+
 .logo {
     display: block;
     text-align: center;
@@ -88,100 +122,53 @@ header {
     width: 70px;
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
-    position: absolute;
+    position: fixed;
     left: 50%;
     margin-left: -35px;
-    z-index: 1;
-    
+    z-index: 1000;
     &:hover{
         transform: rotate(360deg);
     }
 }
-
-.menu {
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: Thin;
-    /*background: rgba(0, 0, 0, 0.05);
-    box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21);*/
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    z-index: 900;
     
-    ul{
-        margin: 0;
-    }
-    * {
-    font-size: 17px;
-    color: #fff;
-}
-    
-}
-
-/* Menu hamburguesa */
-
-.hamburguesa {
-    border: none;
-    background: none;
-    padding-top: 7px;
-}
-// ICONOS
-.glyphicon-menu-hamburger {
-    color: #F05941;
-    font-size: 40px;
-    right: -21px;
-}
-#main-navigation {
-    z-index: 1;
-    position: fixed;
-    right: 10px;
-    margin: 50px 0 0 0;
-}
-#main-navigation ul {
-    background: rgba(0,0,0,0.7);
-    list-style: none;
-    padding: 10px;
-    border-radius: 5px;
-}
-#main-navigation ul a {
-    color: #fff;
-}
-#main-navigation ul a:hover {
-    background: rgb(240,95,64);
-    border-radius: 10px;
-}
-/* Menu fijo con javascript */
-.menu-fijo {
-    background: rgba(255, 255, 255, 0.78);
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.34);
-}
-.menu-fijo .logo, .menu-fijo ul li a {
-    color: #BE3144;
-}
-/* Fin Menu fijo con javascript */
-
-.menu .link-nav:hover {
-    background: #BE3144;
-    color: #fff;
-}
-nav ul {
-    text-align: right;
-    overflow: hidden; /* Limpiamos errores de float */
-    & li {
-        display: inline-block;
-        & a {
-            display: inline-block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-            padding: 10px;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
+    .container-fluid {
+        padding: 0 !important;
     }
 }
+.navbar-collapse {
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+}
 
+.nav {
+    padding: 0 15px;
+    width: 100%;
+}
+
+.nav>li {
+    padding: 0;
+}
+
+.navbar-nav>li>a {
+    text-align: center;
+    &:hover{
+        color: red;
+    }
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: #f2eeed;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    color: #f2eeed;
+    background: rgba(44, 44, 44, 0.76);
+}
 /* ---------------------------------------------------------------------------------- HERO -- */
 .hero {
     margin: 0 auto;
@@ -195,6 +182,7 @@ nav ul {
     margin-top: 0;
     padding: 100px;
     font-size: 56px;
+    color: #fff;
 }
 .letra{
     background: rgba(47, 27, 65, 1);
@@ -226,34 +214,24 @@ hr {
 }
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
 .aboutme {
-    /*background: url(../img/rocas.jpeg) no-repeat;
-    background-size: cover;
-    background-position:top top;
-    background-attachment: fixed;*/
     padding-bottom: 100px;
 }
 .container-aboutme {
-    height: 580px;
-    .who{
-        background: rgba(0, 0, 0, 0.31);
-        color: #fff;
-        padding: 15px 35px 30px 35px;
-        p{
-            font-size: 18px;
-        }
-    }
+    font-size: 18px;
 }
 
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
-
+.list-portfolio {
+    width: 33%;
+    margin: 0;
+    float: left;
+}
 
 /* -------------------------------------------------------------------------------- SKILLS -- */
 
 .skills{
-    /*background: url(../img/wall11.jpg) no-repeat;
-    background-size: cover;
-    background-position:center center;
-    background-attachment: fixed;*/
+    background: linear-gradient(to top, #f2eeed, white);
+    //background: $color-one-fondo;
     padding-bottom: 100px;
     #fill {
         background: #F05941;
@@ -293,9 +271,8 @@ hr {
     .js{ background: rgba(190, 49, 68, 0.55); height:80px; padding: 20px;}
     .bootstrap{ background: rgba(240, 89, 65, 0.55); height:90px; padding: 25px;}
     .jquery{ background: rgba(174, 175, 122, 0.55); height:90px; padding: 25px;}
-    .ajax{ background: rgba(54, 209, 196, 0.55); height:20px; line-height: 17px;}
-    .angular{ background: rgba(220, 55, 55, 0.55); height:20px; line-height: 19px;}
-    .fun{ background: rgba(99, 10, 16, 0.55); height:50px; line-height: 45px;}
+    .ajax{ background: rgba(54, 209, 196, 0.55); height:50px; line-height: 17px;}
+    .angular{ background: rgba(220, 55, 55, 0.55); height:40px; line-height: 19px;}
 }
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
@@ -335,11 +312,7 @@ background: url(../img/wall8.jpg) no-repeat;
 
 
 .portfolio-item {
-    height:195px; 
-    width:349x; 
-    float:left;
-    margin:15px; 
-    border: 1px solid #737373; 
+    height:195px;
     padding:10px;
     -webkit-transition: background 1s ease-out;
     -moz-transition: background 1s ease-out;
@@ -360,7 +333,7 @@ background: url(../img/wall8.jpg) no-repeat;
         margin: 0 auto;
         position: relative;
         display: inline-block;
-        left: -49px;
+        left: -22px;
         width: 400px;
     }
 }

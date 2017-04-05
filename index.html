@@ -13,51 +13,40 @@
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/queries.css">
-	
 </head>
-<body data-spy="scroll" onload="init()">
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="init()">
+
 <!-- -------------------------------------------------------------------------------- HEADER -->
     <header>
+    <div class="fondo">
+    
+    <ul class="ul-logo"><a class="logo" href="index.html"><img class="img-logo" id="logo-img" src="img/logo_white.png" alt=""></a></ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
-            <div id="navbar">
-                <div class="row menu">  
-                    <div class="col-md-5 col-sm-5 col-xs-0 menu-left">
-                        <nav class="hidden-xs">
-                            <ul class="desktop-menu list-inline text-right">
-                                <li><a class="link-nav a-about" href="#aboutme"></a></li>
-                                <li><a class="link-nav a-skill" href="#skills"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-9">
-                        <ul class="ul-logo"><a class="logo" href="index.html"><img class="img-logo" id="logo-img" src="img/logo_white.png" alt=""></a></ul>
-                    </div>
-                    <div class="col-md-5 col-sm-5 col-xs-3 menu-right">
-                        <div class="text-left visible-xs">
-                            <button class="hamburguesa" data-toggle="collapse" data-target="#main-navigation"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
-                        </div>
-                        <nav class="hidden-xs">
-                            <ul class="desktop-menu list-inline text-left">
-                                <li><a class="link-nav a-portfolio" href="#portfolio"></a></li>
-                                <li><a class="link-nav a-contact" href="#contact"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            
-            
-<!-- ---------------------------------------------------------------------- MENU HAMBURGUESA -->
-                <nav class="visible-xs">
-                    <div id="main-navigation" class="collapse">
-                        <ul class="mobile-menu text-left">
-                            <li><a href="#aboutme">SOBRE MÍ</a></li>
-                            <li><a href="#skills">HABILIDADES</a></li>
-                            <li><a href="#portfolio">PORTAFOLIO</a></li>
-                            <li><a href="#contact">CONTACTO</a></li>
-                        </ul>
-                    </div>
-                </nav>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>       
+                </button>
             </div>
+            <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="col-xs-2"><a class="a-about" href="#aboutme"></a></li>
+                    <div class="clearfix visible-xs"></div>
+                    <li class="col-xs-2"><a class="a-skill" href="#skills"></a></li>
+                    <div class="clearfix visible-xs"></div>
+                    <li class="col-xs-2 col-xs-offset-4"><a class="a-portfolio" href="#portfolio"></a></li>
+                    <div class="clearfix visible-xs"></div>
+                    <li class="col-xs-2"><a class="a-contact" href="#contact"></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
 <!-- ---------------------------------------------------------------------------------- HERO -->
             <div class="contenedor">
                 <h1 class="hero">
@@ -65,13 +54,14 @@
                     <p id="let_o" class="letra letra-o" >O</p>
                     <p id="let_l" class="letra letra-l" >L</p>
                     <p id="let_a" class="letra letra-a" >A</p>
-                    <h1 id="nombre" class="text-center" style="display:none;">¡Bienvenido! <br><span>Soy Fabiola</span></h1>
-                    
+                    <h1 id="nombre" class="text-center" style="display:none;">¡Bienvenid@! <br><span>Soy Fabiola</span></h1>
                 </h1>
-                <!--<button class="boton">CONOCE MÁS</button>-->
             </div>
         </div>
+        
+    </div>    
     </header>
+    
 <!-- ------------------------------------------------------------------------------------- ABOUT ME -->
     <section class="aboutme" id="aboutme">
         <div class="container">
@@ -79,14 +69,11 @@
                 <h2>Sobre mí</h2>
                 <div class="container-aboutme">
                     <div class="col-md-7">
-                        <img src="img/rocas.jpeg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-md-5 who">
-                        
-                        <h3 class="text-center">¿Quién soy?</h3>
                         <p class="text-center">Mi nombre es Fabiola Ampuero Chalco, soy coder de Laboratoria, me gusta este rubro tecnológico porque con las habilidades que he adquirido aquí me siento capaz de hacer un cambio y mejorar la calidad de vida de las personas, distritos e incluso ciudades.</p>
-                        <h3 class="text-center">¿Qué hago?</h3>
                         <p class="text-center">Lo que aprendí me permitió crear aplicaciones como Whatsapp y Lyft, juegos como 3 en raya, y páginas web como La República en responsive. Me siento empoderada con este conocimiento, ahora no hay límites para mí.</p>
+                    </div>
+                    <div class="col-md-5">
+                        
                     </div>
                 </div>
             </div>
@@ -99,7 +86,6 @@
             <p>Mis conocimientos en desarrollo web.</p>
             <div class="row">
                 <div class="col-md-6">
-                    <p>En cuanto a habilidades blandas soy una persona responsable, puntual, proactiva y líder. Me gusta trabajar en un ambiente tranquilo y considero que lo más importante es el respeto y la sinceridad. Disfruto trabajando en equipo, siento que así las ideas se complementan y el resultado es mejor. Tengo la misión de ser parte del cambio de mi ciudad participando en proyectos y siendo impulsora de emprendimiento social.</p>
                     <button id="fill">Ver habilidades</button>
                 </div>
                 <div class="col-md-6">
@@ -112,7 +98,6 @@
                             <div class="jquery text-center">Jquery</div>
                             <div class="ajax text-center">Ajax</div>
                             <div class="angular text-center">Angular</div>
-                            <div class="fun text-center">Diversión</div>
                         </div>
                     </div>
                 </div>
@@ -146,7 +131,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#codergirls" rel="codergirls" class="expand">
                                     <div class="thumb">
@@ -155,7 +140,7 @@
                                 </a> 
                             </div>
                         </li>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#danzaarte" rel="danzaarte" class="expand">
                                     <div class="thumb">
@@ -164,7 +149,7 @@
                                 </a> 
                             </div>
                         </li>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#gatoloco" rel="gatoloco" class="expand">
                                     <div class="thumb">
@@ -173,7 +158,7 @@
                                 </a> 
                             </div>
                         </li>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#lyft" rel="lyft" class="expand">
                                     <div class="thumb">
@@ -182,7 +167,7 @@
                                 </a> 
                             </div>
                         </li>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#whatsapp" rel="whatsapp" class="expand">
                                     <div class="thumb">
@@ -191,7 +176,7 @@
                                 </a> 
                             </div>
                         </li>
-                        <li>
+                        <li class="list-portfolio">
                             <div class="portfolio-item">
                                 <a href="#usertesting" rel="usertesting" class="expand">
                                     <div class="thumb">
@@ -248,10 +233,9 @@
     <script src="js/common.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/header.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
     
 </body>
 </html>

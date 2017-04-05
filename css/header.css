@@ -1,6 +1,5 @@
 /* ------------------------------------------------------------------------------- GENERAL -- */
 * {
-  /*outline: 1px solid rgba(255, 0, 0, 0.38);*/
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -36,16 +35,14 @@ h2 {
   margin: 0;
   text-align: center;
   padding: 93px 0 15px 0;
-  /*font-family: "Josefin Sans";*/
-  font-family: "Playfair Display";
+  font-family: "Dancing Script";
   font-size: 50px;
   color: #BE3144; }
 
 h3 {
-  font-family: "Playfair Display";
+  font-family: "Dancing Script";
   font-size: 30px;
   color: #BE3144;
-  font-style: italic;
   font-weight: bold; }
 
 p {
@@ -55,12 +52,22 @@ p {
 
 /* -------------------------------------------------------------------------------- HEADER -- */
 header {
-  background: url(../img/wall1.jpg) no-repeat;
+  animation: fabi 8s infinite;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-  height: 300px; }
+  background-attachment: fixed; }
+
+@keyframes fabi {
+  0%, 32% {
+    background: url(../img/wsbf12-1.jpg) no-repeat;
+    background-attachment: fixed; }
+  35%, 65% {
+    background: url(../img/wsbf13-1-1.jpg) no-repeat;
+    background-attachment: fixed; }
+  68%, 100% {
+    background: url(../img/wsbf17-2.jpg) no-repeat;
+    background-attachment: fixed; } }
+.fondo {
+  background: rgba(133, 78, 83, 0.49) !important; }
 
 .logo {
   display: block;
@@ -71,87 +78,45 @@ header {
   width: 70px;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
-  position: absolute;
+  position: fixed;
   left: 50%;
   margin-left: -35px;
-  z-index: 1; }
+  z-index: 1000; }
   .img-logo:hover {
     transform: rotate(360deg); }
 
-.menu {
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: Thin;
-  /*background: rgba(0, 0, 0, 0.05);
-  box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.21);*/ }
-  .menu ul {
-    margin: 0; }
-  .menu * {
-    font-size: 17px;
-    color: #fff; }
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 900; }
+  .navbar-inverse .container-fluid {
+    padding: 0 !important; }
 
-/* Menu hamburguesa */
-.hamburguesa {
-  border: none;
-  background: none;
-  padding-top: 7px; }
-
-.glyphicon-menu-hamburger {
-  color: #F05941;
-  font-size: 40px;
-  right: -21px; }
-
-#main-navigation {
-  z-index: 1;
-  position: fixed;
-  right: 10px;
-  margin: 50px 0 0 0; }
-
-#main-navigation ul {
-  background: rgba(0, 0, 0, 0.7);
-  list-style: none;
-  padding: 10px;
-  border-radius: 5px; }
-
-#main-navigation ul a {
+.navbar-collapse {
+  background: transparent;
   color: #fff; }
 
-#main-navigation ul a:hover {
-  background: #f05f40;
-  border-radius: 10px; }
+.nav {
+  padding: 0 15px;
+  width: 100%; }
 
-/* Menu fijo con javascript */
-.menu-fijo {
-  background: rgba(255, 255, 255, 0.78);
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.34); }
+.nav > li {
+  padding: 0; }
 
-.menu-fijo .logo, .menu-fijo ul li a {
-  color: #BE3144; }
+.navbar-nav > li > a {
+  text-align: center; }
+  .navbar-nav > li > a:hover {
+    color: red; }
 
-/* Fin Menu fijo con javascript */
-.menu .link-nav:hover {
-  background: #BE3144;
+.navbar-inverse .navbar-nav > li > a {
+  color: #f2eeed; }
+
+.navbar-inverse .navbar-nav > li > a:hover {
   color: #fff; }
 
-nav ul {
-  text-align: right;
-  overflow: hidden;
-  /* Limpiamos errores de float */ }
-  nav ul li {
-    display: inline-block; }
-    nav ul li a {
-      display: inline-block;
-      /* Convertimos los elementos a en elementos bloque para manipular el padding */
-      padding: 10px;
-      text-decoration: none;
-      transition: all 0.2s; }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  color: #f2eeed;
+  background: rgba(44, 44, 44, 0.76); }
 
 /* ---------------------------------------------------------------------------------- HERO -- */
 .hero {
@@ -165,7 +130,8 @@ nav ul {
   font-family: "Dancing Script" !important;
   margin-top: 0;
   padding: 100px;
-  font-size: 56px; }
+  font-size: 56px;
+  color: #fff; }
 
 .letra {
   background: #2f1b41;
@@ -197,28 +163,20 @@ hr {
 
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
 .aboutme {
-  /*background: url(../img/rocas.jpeg) no-repeat;
-  background-size: cover;
-  background-position:top top;
-  background-attachment: fixed;*/
   padding-bottom: 100px; }
 
 .container-aboutme {
-  height: 580px; }
-  .container-aboutme .who {
-    background: rgba(0, 0, 0, 0.31);
-    color: #fff;
-    padding: 15px 35px 30px 35px; }
-    .container-aboutme .who p {
-      font-size: 18px; }
+  font-size: 18px; }
 
 /* ----------------------------------------------------------------------------- PORTFOLIO -- */
+.list-portfolio {
+  width: 33%;
+  margin: 0;
+  float: left; }
+
 /* -------------------------------------------------------------------------------- SKILLS -- */
 .skills {
-  /*background: url(../img/wall11.jpg) no-repeat;
-  background-size: cover;
-  background-position:center center;
-  background-attachment: fixed;*/
+  background: linear-gradient(to top, #f2eeed, white);
   padding-bottom: 100px; }
   .skills #fill {
     background: #F05941;
@@ -268,16 +226,12 @@ hr {
     padding: 25px; }
   .skills .ajax {
     background: rgba(54, 209, 196, 0.55);
-    height: 20px;
+    height: 50px;
     line-height: 17px; }
   .skills .angular {
     background: rgba(220, 55, 55, 0.55);
-    height: 20px;
+    height: 40px;
     line-height: 19px; }
-  .skills .fun {
-    background: rgba(99, 10, 16, 0.55);
-    height: 50px;
-    line-height: 45px; }
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
 /* ---------------------------------------------------------------------------- END FOOTER -- */
@@ -308,10 +262,6 @@ hr {
 
 .portfolio-item {
   height: 195px;
-  width: 349x;
-  float: left;
-  margin: 15px;
-  border: 1px solid #737373;
   padding: 10px;
   -webkit-transition: background 1s ease-out;
   -moz-transition: background 1s ease-out;
@@ -329,7 +279,7 @@ hr {
     margin: 0 auto;
     position: relative;
     display: inline-block;
-    left: -49px;
+    left: -22px;
     width: 400px; }
 
 #close {

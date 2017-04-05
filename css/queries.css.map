@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oCAAqC;EACjC,OAAQ;IACJ,OAAO,EAAE,QAAQ;AAGzB,oCAAqC;EACjC,gBAAiB;IACb,WAAW,EAAE,YAAY",
+"sources": ["../sass/queries.scss"],
+"names": [],
+"file": "queries.css"
+}
