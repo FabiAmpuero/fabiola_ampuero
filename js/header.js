@@ -89,7 +89,7 @@ function nombreIn() {
 }*/
 
 function fillSkills() {
-    $(".hijo").css("height","600px");
+    $(".hijo").css("height","500px");
 }
 
 

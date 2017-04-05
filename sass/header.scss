@@ -214,6 +214,7 @@ hr {
 }
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
 .aboutme {
+    background: linear-gradient(to bottom, #f2eeed, white);
     padding-bottom: 100px;
 }
 .container-aboutme {
@@ -230,9 +231,13 @@ hr {
 /* -------------------------------------------------------------------------------- SKILLS -- */
 
 .skills{
-    background: linear-gradient(to top, #f2eeed, white);
+    
     //background: $color-one-fondo;
     padding-bottom: 100px;
+    
+    .logo-skill {
+        z-index: 1000;
+    }
     #fill {
         background: #F05941;
         padding: 15px;
@@ -241,21 +246,22 @@ hr {
     }
     .padre{
         position: relative;
-        background: url(../img/clase_efecto.jpeg) no-repeat;
+        /*background: url(../img/logo-skill.png) no-repeat;
         background-size: auto;
         background-position:center center;
-        background-attachment: scroll;
-        height: 600px;
+        background-attachment: scroll;*/
+        height: 500px;
         
         img{
-            opacity: 0.5;
+            opacity: 1;
         }
     }
     .hijo{
+        z-index: -2;
         position: absolute;
         height: 0px;
         overflow: hidden;
-        width: 100%;
+        width: 500px;
         bottom: 0;
         transition: all 0.8s;
         * {
@@ -266,13 +272,13 @@ hr {
     .hijo:hover{
         height: 80px;
     }
-    .html{ background: rgba(47, 27, 65, 0.55); height:130px; padding: 45px;}
-    .css{ background: rgba(135, 35, 65, 0.55); height:120px; padding: 39px;}
-    .js{ background: rgba(190, 49, 68, 0.55); height:80px; padding: 20px;}
-    .bootstrap{ background: rgba(240, 89, 65, 0.55); height:90px; padding: 25px;}
-    .jquery{ background: rgba(174, 175, 122, 0.55); height:90px; padding: 25px;}
-    .ajax{ background: rgba(54, 209, 196, 0.55); height:50px; line-height: 17px;}
-    .angular{ background: rgba(220, 55, 55, 0.55); height:40px; line-height: 19px;}
+    .html{ background: rgba(47, 27, 65, 0.55); height:100px; padding: 45px;z-index: -2;}
+    .css{ background: rgba(135, 35, 65, 0.55); height:100px; padding: 39px;z-index: -2;}
+    .js{ background: rgba(190, 49, 68, 0.55); height:70px; padding: 20px;z-index: -2;}
+    .bootstrap{ background: rgba(240, 89, 65, 0.55); height:80px; padding: 25px;z-index: -2;}
+    .jquery{ background: rgba(174, 175, 122, 0.55); height:70px; padding: 25px;z-index: -2;}
+    .ajax{ background: rgba(54, 209, 196, 0.55); height:40px; line-height: 17px;z-index: -2;}
+    .angular{ background: rgba(220, 55, 55, 0.55); height:40px; line-height: 19px;z-index: -2;}
 }
 
 /* -------------------------------------------------------------------------------- FOOTER -- */
