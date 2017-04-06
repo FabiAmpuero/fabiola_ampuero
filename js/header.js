@@ -38,7 +38,6 @@ function init() {
 }
 
 function logoSkill(_width) {
-    console.log(_width);
     if(_width<=500){
         $(".logo-skill").addClass("img-responsive");
         $(".hijo").css("width","100%");
@@ -101,14 +100,11 @@ function fillSkills() {
 // PORTAFOLIO
 $('.expand').click(function(){
     var portid = $(this).attr('rel');
-    console.log(portid);
     $('html,body').animate({scrollTop: $('#showcase').offset().top-100}, 500, 'easeInOutQuad');
     
     for(var i in portafolios){
-        console.log(portafolios[i].name);
         if(portafolios[i].name==portid){
             var id = portafolios[i];
-            console.log(id);
         }
     }
     
