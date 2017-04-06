@@ -113,7 +113,7 @@ $('.expand').click(function(){
         var html = 
         '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
         '<div class="col-md-7 col-xs-12">'+
-        '<img class="work-img img-responsive" src="img/'+portid+'.jpg">'+
+        '<img class="work-img img-responsive" src="img/'+portid+'.JPG">'+
         '</div><div class="clearfix visible-xs"></div>'+
         '<div class="col-md-5 col-xs-12">'+
         '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.url+'" target="blank_"><span>Visitar Página</span></a>'+
@@ -130,7 +130,7 @@ $('.expand').click(function(){
         var html = 
         '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
         '<div class="col-md-7 col-xs-12">'+
-        '<img class="work-img img-responsive" src="img/'+portid+'.jpg">'+
+        '<img class="work-img img-responsive" src="img/'+portid+'.JPG">'+
         '</div><div class="clearfix visible-xs"></div>'+
         '<div class="col-md-5 col-xs-12">'+
         '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.url+'" target="blank_"><span>Visitar Página</span></a>'+
