@@ -1,5 +1,7 @@
 function init() {
     anime = setInterval(animacion,500);
+    skillShow();
+    contactShow();
     
     $(window).on('scroll', function(){
 		if ( $(window).scrollTop() > 0 ){
@@ -28,10 +30,11 @@ function init() {
     alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
     
-    $("#fill").click(fillSkills);
+    //$("#fill").click(fillSkills);
     
     logoSkill(widthWindow);
     menuResponsive(widthWindow);
+    contactFill();
 }
 
 function logoSkill(_width) {
@@ -42,10 +45,17 @@ function logoSkill(_width) {
     }
 }
 
+function skillShow() {
+    $(window).on('scroll', function(){
+        //console.log($(window).scrollTop());
+        if ( $(window).scrollTop() >= 1417 ){
+            fillSkills();
+        }
+    });
+}
+
 function menuResponsive(_width) {
     if(_width<768){
-
-
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() == 0 ){
                 $(".a-about").html("SOBRE MÍ");
@@ -84,12 +94,9 @@ function nombreIn() {
     animacion();
 }
 
-
 function fillSkills() {
     $(".hijo").css("height","500px");
 }
-
-
 
 // PORTAFOLIO
 $('.expand').click(function(){
@@ -163,19 +170,109 @@ $('#close').click(function(e){
         scrollTop: $('#portfolio').offset().top},200);
 });
 
-
-
-// CONTACTOO
-
+// ------------------------------------------------------------------------------------------ CONTACTOO
+/*
 $('#btn-contact').click(function () {
-    console.log($(this).parent());
+    //console.log($(this).parent());
   $(this).parent().toggleClass('expand-contact');     
 });
+*/
+function contactShow() {
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() >= 2995 ){
+            $('#btn-contact').parent().addClass('expand-contact');
+        }
+    });
+}
 
+function contactFill(){
+    $("#btn-blue").click(onButtonClick);
+    //$("#name").val('');
+    //$("#email").val('');
+}
 
+// VALIDACION FORMULARIO
 
+function onButtonClick() {
+    console.log($(".mensaje-uno").text());
+    var mensajeCheck = $(".mensaje-uno");
+    localStorage.setItem('Name', $("#name").val());
+    var inputEmail = $("#email");
+    localStorage.setItem('Email', $("#email").val());
+    
+    if($("#name").val() == '' || $("#email").val() == '' || $("#comment").val() == '') {
+        mensajeCheck.html("<h5 class='text-center' style='color:#be3144; font-size:18px; font-weight:bold; text-align:center;'>Debe completar todo el formulario</h5>");
+    } 
+    else {
+        mensajeCheck.html('');
+        if($(".mensaje-uno").text() == ""){
+            mensajeCheck.html("<h5 class='text-center' style='color:#be3144; font-size:18px; font-weight:bold; text-align:center;'>¡Formulario enviado exitosamente!</h5>")
+            $("#name").val("");
+            $("#email").val("");
+            $("#comment").val("");
+        }
+        //location.href='app.html';
+    }
+}
 
+//VALIDAR NOMBRE
+function validateName(_evt){
+    
+    var mensajeName = $(".mensaje");
+    var textoNombre = "<h5 style='color:#be3144; font-size:18px; font-weight:bold; text-align:center;'>Debe ingresar su nombre</h5>";
+    var textoNumero = "<h5 style='color:#be3144; font-size:18px; font-weight:bold; text-align:center;'>Los números no son válidos</h5>";
+ 
+    
+    if($("#name").val() != ""){
+       
+        $("#name").val(convertirMayus($("#name").val()));
+        
+        if(/([0-9])/g.test($("#name").val())){
+            mensajeName.html(textoNumero);
+        } else {
+            mensajeName.html('');
+        }
+    } else {
+        mensajeName.html(textoNombre);
+    }    
+}
 
+//VALIDAR EMAIL
+function validateEmail(_evt){
+    
+    var mensaje = $(".mensaje-email");
+    var textoEmail = "<h5 style='color:#be3144; font-size:18px; font-weight:bold; text-align:center;'>Correo Electrónico Inválido, debe contener ejemplo: hola@dominio.com</h5>";
+
+    if(/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test($("#email").val())){
+        mensaje.html(''); 
+    } else {
+        if($("#email").val().length >= 0){
+            mensaje.html(textoEmail);
+        }
+    }
+}
+
+function convertirMayus(texto){
+    
+    var nombreArray = texto.split("");
+    var primeraLetra = nombreArray[0];
+    var mayuscula = primeraLetra.toUpperCase();
+    var espacio = false;
+
+    for(var i=1; i<nombreArray.length; i++) {
+
+        if(espacio){
+            mayuscula += nombreArray[i].toUpperCase();
+            espacio = false;
+        } else {
+            mayuscula += nombreArray[i];
+            if(nombreArray[i] == " ")
+                espacio = true;
+        }
+    }
+    
+    return mayuscula;
+}
 
 
 
