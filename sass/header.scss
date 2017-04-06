@@ -473,6 +473,13 @@ transition: background 0.7s ease-out;
             }
         }
     }
+    .cv-btn {
+        text-align: center;
+        a {
+            background: red;
+            padding: 10px;
+        }
+    }
 }
 /* ---------------------------------------------------------------------------- END FOOTER -- */
 

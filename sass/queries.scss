@@ -18,10 +18,53 @@
     .portfolio-item img {
         left: -84px;
     }
+    .container-aboutme p {
+        padding: 0;
+    }
+    .about-p {
+        margin-top: 20px;
+    }
+    .img-about {
+        margin-top: 40px;
+    }
+    .skills ul {
+        text-align: left;
+    }
 }
 @media screen and (max-width: 900px){
     .list-portfolio{
         width: 50%;
+    }
+    .portfolio-item img {
+        left: -23px;
+    }
+}
+@media screen and (max-width: 784px){
+    .skills .row>div{
+        width: 100% !important;
+    }
+    .skills ul{
+        margin-top: 20px;
+        margin-left: 50px;
+        li {
+            display: inline-block;
+            width: 200px;
+        }
+    }
+    .skills .padre, .skills .hijo{
+        width: 500px !important;
+    }
+    .skills .padre {
+        margin: 0 auto;
+    }
+    .skills h4{
+        padding-left: 20px;
+    }
+    .skills {
+        padding-bottom: 0;
+    }
+    .portfolio-item img {
+        left: -33px;
     }
 }
 @media screen and (max-width: 700px) {
@@ -56,9 +99,48 @@
     }
 }
 
+@media screen and (max-width: 660px){
+    .list-portfolio{
+        width: 100%;
+        padding: 10px 80px !important;
+    }
+    .portfolio-item img {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 611px){
+    .list-portfolio{
+        padding: 10px 40px !important;
+    }
+}
+
 @media screen and (max-width: 600px){
     .letra {
         font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 535px){
+    .list-portfolio{
+        padding: 10px 0px !important;
+    }
+    .skills .padre img {
+        width: 350px;
+    }
+    .skills .padre, .skills .hijo{
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+
+@media screen and (max-width: 514px){
+    .list-portfolio{
+        width: 100%;
+        padding: 10px 0px !important;
+    }
+    .portfolio-item img {
+        left: 0;
     }
 }
 

@@ -456,6 +456,11 @@ hr {
         font-size: 50px; }
         #footer ul li i:hover {
           color: #be3144; }
+  #footer .cv-btn {
+    text-align: center; }
+    #footer .cv-btn a {
+      background: red;
+      padding: 10px; }
 
 /* ---------------------------------------------------------------------------- END FOOTER -- */
 
