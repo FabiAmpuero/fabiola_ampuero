@@ -4,8 +4,8 @@ var portafolios = [
         "name": "codergirls",
         "titulo": "Coder Girls",
         "texto": "",
-        "url": "https://fabiampuero.github.io/lyft_jquery_app/",
-        "codigo": "https://github.com/FabiAmpuero/lyft_jquery_app"
+        "url": "https://fabiampuero.github.io/coder-girl/",
+        "codigo": "https://github.com/FabiAmpuero/coder-girl"
     },
     {
         "name": "danzaarte",

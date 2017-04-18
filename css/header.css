@@ -191,6 +191,10 @@ hr {
   margin: 0;
   float: left; }
 
+.portfolio a:focus {
+  color: #fff;
+  text-decoration: none; }
+
 /* -------------------------------------------------------------------------------- SKILLS -- */
 .skills {
   padding-bottom: 100px; }
@@ -457,10 +461,16 @@ hr {
         #footer ul li i:hover {
           color: #be3144; }
   #footer .cv-btn {
-    text-align: center; }
+    text-align: center;
+    margin-top: 58px; }
     #footer .cv-btn a {
-      background: red;
-      padding: 10px; }
+      background: #854e53;
+      padding: 10px;
+      color: #fff; }
+      #footer .cv-btn a:focus {
+        text-decoration: none; }
+      #footer .cv-btn a:hover {
+        color: #4e2e31 !important; }
 
 /* ---------------------------------------------------------------------------- END FOOTER -- */
 

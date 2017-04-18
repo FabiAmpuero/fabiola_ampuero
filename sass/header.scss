@@ -34,6 +34,7 @@ body {
 a:hover {
     text-decoration: none;
 }
+
 .contenedor {
     margin: 0 auto;
     box-sizing: border-box;
@@ -216,6 +217,7 @@ hr {
 /* ------------------------------------------------------------------------------ ABOUT ME -- */
 .aboutme {
     background: linear-gradient(to bottom, #f2eeed, white);
+    //#ccafa8
     padding-bottom: 100px;
 }
 .container-aboutme {
@@ -232,6 +234,12 @@ hr {
     width: 33%;
     margin: 0;
     float: left;
+}
+.portfolio {
+    a:focus {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 /* -------------------------------------------------------------------------------- SKILLS -- */
@@ -475,9 +483,17 @@ transition: background 0.7s ease-out;
     }
     .cv-btn {
         text-align: center;
+        margin-top: 58px;
         a {
-            background: red;
+            background: #854e53;
             padding: 10px;
+            color: #fff;
+            &:focus{
+                text-decoration: none;
+            }
+            &:hover{
+                color: #4e2e31 !important;
+            }
         }
     }
 }

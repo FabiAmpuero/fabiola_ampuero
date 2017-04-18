@@ -97,6 +97,22 @@ function fillSkills() {
     $(".hijo").css("height","500px");
 }
 
+// porcentaje skills
+
+function wordpresscount(){
+	$('#color').animate({height:'0px'},1200);
+    $({countNum: $('#count-wordpress').text()}).animate({countNum: 29}, {
+        duration: 1200,
+        easing:'linear',
+        step: function() {
+            $('#count-wordpress').text(Math.floor(this.countNum));
+        },
+        complete: function() {
+            $('#count-wordpress').text(this.countNum);
+        }
+    });
+}
+
 // PORTAFOLIO
 $('.expand').click(function(){
     var portid = $(this).attr('rel');
