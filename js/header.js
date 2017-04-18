@@ -47,8 +47,9 @@ function logoSkill(_width) {
 function skillShow() {
     $(window).on('scroll', function(){
         //console.log($(window).scrollTop());
-        if ( $(window).scrollTop() >= 1417 ){
+        if ( $(window).scrollTop() >= 1385 ){
             fillSkills();
+            countSkills()
         }
     });
 }
@@ -93,25 +94,50 @@ function nombreIn() {
     animacion();
 }
 
-function fillSkills() {
-    $(".hijo").css("height","500px");
-}
 
 // porcentaje skills
 
-function wordpresscount(){
-	$('#color').animate({height:'0px'},1200);
-    $({countNum: $('#count-wordpress').text()}).animate({countNum: 29}, {
-        duration: 1200,
-        easing:'linear',
-        step: function() {
-            $('#count-wordpress').text(Math.floor(this.countNum));
-        },
-        complete: function() {
-            $('#count-wordpress').text(this.countNum);
+function fillSkills() {
+    $(".hijo").css("height","500px");
+    $(".hijo").css("transition","3s");
+}
+
+$('.fill').click(function(){
+    console.log($(window).scrollTop());
+	//$('.count').html('0');
+    $(".hijo").css("height","0");
+    $(".hijo").css("transition","2s");
+    clear = setInterval(fillButton,1400);
+    
+	/*$('#color').animate({height:'380px'},400, function() {
+        gincount();
+    });*/
+});
+
+function fillButton() {
+    if ( $(window).scrollTop() >= 1385 ){
+        console.log($(window).scrollTop());
+        
+        fillSkills();
+        countSkills()
+        
+        clearInterval(clear);
+    }
+}
+function countSkills(){
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
         }
     });
-}
+});
+}	
+
 
 // PORTAFOLIO
 $('.expand').click(function(){
