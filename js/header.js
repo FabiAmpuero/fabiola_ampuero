@@ -37,23 +37,6 @@ function init() {
     contactFill();
 }
 
-function logoSkill(_width) {
-    if(_width<=500){
-        $(".logo-skill").addClass("img-responsive");
-        $(".hijo").css("width","100%");
-    }
-}
-
-function skillShow() {
-    $(window).on('scroll', function(){
-        //console.log($(window).scrollTop());
-        if ( $(window).scrollTop() >= 1385 ){
-            fillSkills();
-            countSkills()
-        }
-    });
-}
-
 function menuResponsive(_width) {
     if(_width<768){
         $(window).on('scroll', function(){
@@ -95,7 +78,24 @@ function nombreIn() {
 }
 
 
-// porcentaje skills
+// SKILLS PORCENTAJE IMAGEN ...
+
+function logoSkill(_width) {
+    if(_width<=500){
+        $(".logo-skill").addClass("img-responsive");
+        $(".hijo").css("width","100%");
+    }
+}
+
+function skillShow() {
+    $(window).on('scroll', function(){
+        //console.log($(window).scrollTop());
+        if ( $(window).scrollTop() >= 1385 ){
+            fillSkills();
+            countSkills()
+        }
+    });
+}
 
 function fillSkills() {
     $(".hijo").css("height","500px");
@@ -107,23 +107,18 @@ $('.fill').click(function(){
 	//$('.count').html('0');
     $(".hijo").css("height","0");
     $(".hijo").css("transition","2s");
-    clear = setInterval(fillButton,1400);
-    
-	/*$('#color').animate({height:'380px'},400, function() {
-        gincount();
-    });*/
-});
-
-function fillButton() {
-    if ( $(window).scrollTop() >= 1385 ){
+    var clear = setInterval(fillButton,1400);
+    //setTimeout al parecer el tiempo se incrementa
+    function fillButton() {
         console.log($(window).scrollTop());
-        
+
         fillSkills();
         countSkills()
-        
+
         clearInterval(clear);
     }
-}
+});
+
 function countSkills(){
     $('.count').each(function () {
     $(this).prop('Counter',0).animate({
