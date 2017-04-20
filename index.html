@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="img/logo_purple.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/hover-min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/queries.css">
@@ -80,31 +81,28 @@
 <section class="skills" id="skills">
         <div class="container">
             <h2>Habilidades</h2>
-            <p class="text-center"></p>
+            <p class="text-center"><button class="fill fill-btn hvr-rectangle-in">Activar</button></p>
+            
             <div class="row">
-                <button class="fill btn btn-primary">Fill</button>
                 <div class="col-md-6 col-xs-4">
-                    <ul>
-                        <li><i class="glyphicon glyphicon-stop skill-html"><span class="count">34</span>%</i><h4>HTML5 <br>CSS3 <br>BOTTSTRAP <br>GIT</h4></li>
-                        <li><i class="glyphicon glyphicon-stop skill-css"><span class="count">26</span>%</i><h4>JAVASCRIPT <br>JQUERY</h4></li>
-                        <li><i class="glyphicon glyphicon-stop skill-boot"><span class="count">20</span>%</i><h4>ANGULAR <br>AJAX <br>JSON</h4></li>
-                        <li><i class="glyphicon glyphicon-stop skill-js"><span class="count">16</span>%</i><h4>SASS <br>GULP <br>NPM</h4></li>
-                        <li><i class="glyphicon glyphicon-stop skill-jquery"><span class="count">4</span>%</i><h4>COFFEE</h4></li>
-                        <li><i class="glyphicon glyphicon-stop skill-ang"><span class="count">0</span>%</i><h4>ANGULAR</h4></li>
+                    <ul class="list-skills">
+                        <li><i class="glyphicon glyphicon-stop skill-html"><span class="count-html">0</span>%</i><h4>HTML5 <br>CSS3 <br>BOTTSTRAP <br>GIT</h4></li>
+                        <li><i class="glyphicon glyphicon-stop skill-css"><span class="count-js">0</span>%</i><h4>JAVASCRIPT <br>JQUERY</h4></li>
+                        <li><i class="glyphicon glyphicon-stop skill-boot"><span class="count-ang">0</span>%</i><h4>ANGULAR <br>AJAX <br>JSON</h4></li>
+                        <li><i class="glyphicon glyphicon-stop skill-js"><span class="count-npm">0</span>%</i><h4>SASS <br>GULP <br>NPM</h4></li>
+                        <li><i class="glyphicon glyphicon-stop skill-jquery"><span class="count-coff">0</span>%</i><h4>COFFEE</h4></li>
                     </ul>
                     
                 </div>
                 <div class="col-md-6 col-xs-8">
                     <div class="padre">
-                        <img class="logo-skill" src="img/logo-skill2.png" alt="">
-                        <div class="hijo" style="width: 495px;">
+                        <img class="logo-skill" src="img/logo-skill4.png" alt="">
+                        <div class="hijo empty-skills" style="width: 400px;">
                             <div class="html text-center"></div>
                             <div class="css text-center"></div>
                             <div class="js text-center"></div>
                             <div class="bootstrap text-center"></div>
                             <div class="jquery text-center"></div>
-                            <div class="ajax text-center"></div>
-                            <div class="angular text-center"></div>
                         </div>
                     </div>
                 </div>
@@ -255,6 +253,8 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     
 </body>
 </html>

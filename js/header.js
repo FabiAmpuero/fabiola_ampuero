@@ -1,4 +1,5 @@
 function init() {
+    console.log("listo carga");
     anime = setInterval(animacion,500);
     skillShow();
     contactShow();
@@ -91,9 +92,10 @@ function skillShow() {
     $(window).on('scroll', function(){
         //console.log($(window).scrollTop());
         if ( $(window).scrollTop() >= 1385 ){
-            fillSkills();
-            countSkills()
-        }
+            //fillSkills();
+            //countSkills();
+            console.log("cuantas");
+        }        
     });
 }
 
@@ -102,36 +104,122 @@ function fillSkills() {
     $(".hijo").css("transition","3s");
 }
 
-$('.fill').click(function(){
+/*$('.fill').click(function(){
     console.log($(window).scrollTop());
 	//$('.count').html('0');
     $(".hijo").css("height","0");
     $(".hijo").css("transition","2s");
+    countSkills();
+    
     var clear = setInterval(fillButton,1400);
-    //setTimeout al parecer el tiempo se incrementa
+    //setTimeout, al parecer el tiempo se incrementa
     function fillButton() {
-        console.log($(window).scrollTop());
-
         fillSkills();
-        countSkills()
-
         clearInterval(clear);
+    }
+});*/
+
+$('.fill').click(function(){
+    if($('.hijo').hasClass('empty-skills')){
+        $('.fill').text('Desactivar');
+        $('.hijo').removeClass('empty-skills');
+        $('.hijo').addClass('fill-skills');
+        countHtml();
+        countJs();
+        countAngular();
+        countNpm();
+        countCoffee();
+    }else {
+        $('.fill').text('Activar');
+        $('.hijo').removeClass('fill-skills');
+        $('.hijo').addClass('empty-skills');
+        $('.count-html').text('0');
+        $('.count-js').text('0');
+        $('.count-ang').text('0');
+        $('.count-npm').text('0');
+        $('.count-coff').text('0');
     }
 });
 
-function countSkills(){
-    $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+function countHtml(){
+    $('.count-html').each(function () {
+        console.log($(this).text());
+        $(this).prop('Counter',0).animate({
+            Counter: 34
+
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
-});
-}	
+}
+
+function countJs(){
+    $('.count-js').each(function () {
+        console.log($(this).text());
+        $(this).prop('Counter',0).animate({
+            Counter: 26
+
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+}
+
+function countAngular(){
+    $('.count-ang').each(function () {
+        console.log($(this).text());
+        $(this).prop('Counter',0).animate({
+            Counter: 20
+
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+}
+
+function countNpm(){
+    $('.count-npm').each(function () {
+        console.log($(this).text());
+        $(this).prop('Counter',0).animate({
+            Counter: 16
+
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+}
+
+function countCoffee(){
+    $('.count-coff').each(function () {
+        console.log($(this).text());
+        $(this).prop('Counter',0).animate({
+            Counter: 4
+
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+}
 
 
 // PORTAFOLIO

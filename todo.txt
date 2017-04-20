@@ -1,0 +1,3 @@
+- en responsivo (celular) hacer visible el menu hamburguesa
+- en responsivo los iconos de footer hay que ponerlos en orden y mas pequeños
+

@@ -273,13 +273,28 @@ hr {
         font-size: 20px;
         color: #fff;
     }
+    
+    .list-skills {
+        li{
+            margin-bottom: 20px;
+            h4{
+                padding-top: 0;
+            }
+            i {
+                span{
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    
     .padre{
         position: relative;
         /*background: url(../img/logo-skill.png) no-repeat;
         background-size: auto;
         background-position:center center;
         background-attachment: scroll;*/
-        height: 500px;
+        height: 404px;
         
         img{
             opacity: 1;
@@ -299,20 +314,38 @@ hr {
         }
     }
     
-    .html{ background: rgba(47, 27, 65, 0.55); height:100px; padding: 45px;z-index: -2;}
+    .fill-skills{
+        height: 400px;
+        transition: 3s;
+    }
+    
+    .empty-skills{
+        height: 0;
+        transition: 2s;
+    }
+    
+    .fill-btn {
+        margin: 0 auto;
+        background: #854e53;
+        border: none;
+        padding: 10px;
+        color: #4e2e31;
+        &:hover{
+            color: #fff !important;
+        }
+    }
+    
+    .html{ background: rgba(47, 27, 65, 0.55); height:133px; padding: 45px;z-index: -2;}
     .css{ background: rgba(135, 35, 65, 0.55); height:100px; padding: 39px;z-index: -2;}
-    .js{ background: rgba(190, 49, 68, 0.55); height:70px; padding: 20px;z-index: -2;}
-    .bootstrap{ background: rgba(240, 89, 65, 0.55); height:80px; padding: 25px;z-index: -2;}
-    .jquery{ background: rgba(174, 175, 122, 0.55); height:70px; padding: 25px;z-index: -2;}
-    .ajax{ background: rgba(54, 209, 196, 0.55); height:40px; line-height: 17px;z-index: -2;}
-    .angular{ background: rgba(220, 55, 55, 0.55); height:40px; line-height: 19px;z-index: -2;}
+    .js{ background: rgba(190, 49, 68, 0.55); height:76px; padding: 20px;z-index: -2;}
+    .bootstrap{ background: rgba(240, 89, 65, 0.55); height:58px; padding: 25px;z-index: -2;}
+    .jquery{ background: rgba(174, 175, 122, 0.55); height:10px; padding: 25px;z-index: -2;}
     
     .skill-html{color: rgba(47, 27, 65, 0.55);}
     .skill-css{color: rgba(135, 35, 65, 0.55);}
     .skill-boot{color: rgba(190, 49, 68, 0.55);}
     .skill-js{color: rgba(240, 89, 65, 0.55);}
     .skill-jquery{color: rgba(174, 175, 122, 0.55);}
-    .skill-ang{color: rgba(54, 209, 196, 0.55);}
 }
 
 /* -----------------------------------------

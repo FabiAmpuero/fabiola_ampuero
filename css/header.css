@@ -217,13 +217,19 @@ hr {
     padding: 15px;
     font-size: 20px;
     color: #fff; }
+  .skills .list-skills li {
+    margin-bottom: 20px; }
+    .skills .list-skills li h4 {
+      padding-top: 0; }
+    .skills .list-skills li i span {
+      padding-bottom: 20px; }
   .skills .padre {
     position: relative;
     /*background: url(../img/logo-skill.png) no-repeat;
     background-size: auto;
     background-position:center center;
     background-attachment: scroll;*/
-    height: 500px; }
+    height: 404px; }
     .skills .padre img {
       opacity: 1; }
   .skills .hijo {
@@ -237,11 +243,23 @@ hr {
     .skills .hijo * {
       font-size: 25px;
       color: #fff; }
-  .skills .hijo:hover {
-    height: 80px; }
+  .skills .fill-skills {
+    height: 400px;
+    transition: 3s; }
+  .skills .empty-skills {
+    height: 0;
+    transition: 2s; }
+  .skills .fill-btn {
+    margin: 0 auto;
+    background: #854e53;
+    border: none;
+    padding: 10px;
+    color: #4e2e31; }
+    .skills .fill-btn:hover {
+      color: #fff !important; }
   .skills .html {
     background: rgba(47, 27, 65, 0.55);
-    height: 100px;
+    height: 133px;
     padding: 45px;
     z-index: -2; }
   .skills .css {
@@ -251,28 +269,18 @@ hr {
     z-index: -2; }
   .skills .js {
     background: rgba(190, 49, 68, 0.55);
-    height: 70px;
+    height: 76px;
     padding: 20px;
     z-index: -2; }
   .skills .bootstrap {
     background: rgba(240, 89, 65, 0.55);
-    height: 80px;
+    height: 58px;
     padding: 25px;
     z-index: -2; }
   .skills .jquery {
     background: rgba(174, 175, 122, 0.55);
-    height: 70px;
+    height: 10px;
     padding: 25px;
-    z-index: -2; }
-  .skills .ajax {
-    background: rgba(54, 209, 196, 0.55);
-    height: 40px;
-    line-height: 17px;
-    z-index: -2; }
-  .skills .angular {
-    background: rgba(220, 55, 55, 0.55);
-    height: 40px;
-    line-height: 19px;
     z-index: -2; }
   .skills .skill-html {
     color: rgba(47, 27, 65, 0.55); }
@@ -284,8 +292,6 @@ hr {
     color: rgba(240, 89, 65, 0.55); }
   .skills .skill-jquery {
     color: rgba(174, 175, 122, 0.55); }
-  .skills .skill-ang {
-    color: rgba(54, 209, 196, 0.55); }
 
 /* -----------------------------------------
    Portfolio
