@@ -6,7 +6,7 @@ function init() {
     
     $(window).on('scroll', function(){
 		if ( $(window).scrollTop() > 0 ){
-            $('#logo-img').attr("src","img/logo_purpple.png");
+            $('#logo-img').attr("src","img/logoo2.png");
             $(".a-about").html("SOBRE MÍ");
             $(".a-skill").html("HABILIDADES");
             $(".a-portfolio").html("PORTAFOLIO");
@@ -15,7 +15,7 @@ function init() {
             $(".navbar-toggle").css("background-color","rgba(133, 78, 83, 0.77)");
 		} else {
             $(".navbar-collapse").css("background-color","rgba(0, 0, 0, 0)");
-            $('#logo-img').attr("src","img/logo_white.png");
+            $('#logo-img').attr("src","img/logoo2.png");
             $(".a-about").html("");
             $(".a-skill").html("");
             $(".a-portfolio").html("");
