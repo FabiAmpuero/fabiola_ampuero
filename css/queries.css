@@ -300,7 +300,16 @@
     width: 100%; }
 
   .portfolio-item img {
-    left: -42px; } }
+    left: -42px; }
+
+  port-right {
+    width: 100%; }
+
+  port-left {
+    width: 100%; }
+
+  .visit-button {
+    width: 100%; } }
 @media screen and (max-width: 360px) {
   .container {
     width: 95% !important; }

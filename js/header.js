@@ -242,10 +242,10 @@ $('.expand').click(function(){
         
         var html = 
         '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
-        '<div class="col-md-7 col-xs-12">'+
+        '<div class="col-md-7 col-xs-12 port-left">'+
         '<img class="work-img img-responsive" src="img/'+portid+'.JPG">'+
         '</div><div class="clearfix visible-xs"></div>'+
-        '<div class="col-md-5 col-xs-12">'+
+        '<div class="col-md-5 col-xs-12 port-right">'+
         '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.url+'" target="blank_"><span>Visitar Página</span></a>'+
         '<a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.codigo+'" target="blank_"><span>Ver Código</span></a>'+
         '</div>'+
@@ -259,10 +259,10 @@ $('.expand').click(function(){
         
         var html = 
         '<div id="'+portid+'" class="work-content" style="margin-top:25px;">'+
-        '<div class="col-md-7 col-xs-12">'+
+        '<div class="col-md-7 col-xs-12 port-left">'+
         '<img class="work-img img-responsive" src="img/'+portid+'.JPG">'+
         '</div><div class="clearfix visible-xs"></div>'+
-        '<div class="col-md-5 col-xs-12">'+
+        '<div class="col-md-5 col-xs-12 port-right">'+
         '<h3 class"work-title">'+id.titulo+'</h3><p class"work-text">'+id.texto+'</p><a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.url+'" target="blank_"><span>Visitar Página</span></a>'+
         '<a class="visit-button glyphicon glyphicon-fullscreen" href="'+id.codigo+'" target="blank_"><span>Ver Código</span></a>'+
         '</div>'+
