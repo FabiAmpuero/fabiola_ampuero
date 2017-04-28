@@ -1,7 +1,7 @@
 function init() {
     console.log("listo carga");
     anime = setInterval(animacion,500);
-    skillShow();
+    //skillShow();
     contactShow();
     
     $(window).on('scroll', function(){
@@ -36,6 +36,8 @@ function init() {
     logoSkill(widthWindow);
     menuResponsive(widthWindow);
     contactFill();
+    $(window).scrollTop();
+    
 }
 
 function menuResponsive(_width) {
@@ -88,16 +90,16 @@ function logoSkill(_width) {
     }
 }
 
-function skillShow() {
+/*function skillShow() {
     $(window).on('scroll', function(){
         //console.log($(window).scrollTop());
         if ( $(window).scrollTop() >= 1385 ){
             //fillSkills();
             //countSkills();
-            console.log("cuantas");
+            //console.log("cuantas");
         }        
     });
-}
+}*/
 
 function fillSkills() {
     $(".hijo").css("height","500px");
@@ -143,7 +145,7 @@ $('.fill').click(function(){
 
 function countHtml(){
     $('.count-html').each(function () {
-        console.log($(this).text());
+        //console.log($(this).text());
         $(this).prop('Counter',0).animate({
             Counter: 34
 
@@ -159,7 +161,7 @@ function countHtml(){
 
 function countJs(){
     $('.count-js').each(function () {
-        console.log($(this).text());
+        //console.log($(this).text());
         $(this).prop('Counter',0).animate({
             Counter: 26
 
@@ -175,7 +177,7 @@ function countJs(){
 
 function countAngular(){
     $('.count-ang').each(function () {
-        console.log($(this).text());
+        //console.log($(this).text());
         $(this).prop('Counter',0).animate({
             Counter: 20
 
@@ -191,7 +193,7 @@ function countAngular(){
 
 function countNpm(){
     $('.count-npm').each(function () {
-        console.log($(this).text());
+        //console.log($(this).text());
         $(this).prop('Counter',0).animate({
             Counter: 16
 
@@ -207,7 +209,7 @@ function countNpm(){
 
 function countCoffee(){
     $('.count-coff').each(function () {
-        console.log($(this).text());
+        //console.log($(this).text());
         $(this).prop('Counter',0).animate({
             Counter: 4
 
@@ -300,14 +302,19 @@ $('#btn-contact').click(function () {
 */
 function contactShow() {
     $(window).on('scroll', function(){
-        if ( $(window).scrollTop() >= 2995 ){
+        if ( $(window).scrollTop() >= 2985 ){
             $('#btn-contact').parent().addClass('expand-contact');
         }
     });
 }
 
+function onContactClick() {
+    $('#btn-contact').parent().addClass('expand-contact');
+}
+
 function contactFill(){
     $("#btn-blue").click(onButtonClick);
+    $("#btn-contact").click(onContactClick);
     //$("#name").val('');
     //$("#email").val('');
 }

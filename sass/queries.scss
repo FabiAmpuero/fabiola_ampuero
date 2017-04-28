@@ -2,8 +2,14 @@
     .portfolio-item img {
         left: -48px;
     }
+    .skills .list-skills li i {
+        padding-left: 100px !important;
+    }
 }
 @media screen and (max-width: 991px) {
+    .container {
+        width: 785px !important;
+    }
     #close {
         top: -36px;
     }
@@ -25,12 +31,56 @@
         margin-top: 20px;
     }
     .img-about {
-        margin-top: 40px;
+        padding-left: 20px;
+        margin-top: 37px;
     }
     .skills ul {
         text-align: left;
     }
+    p {
+        font-size: 17px;
+    }
+    .skills .list-skills li {
+        i {
+            font-size: 41px !important;
+            padding-left: 50px !important;
+        }
+        h4 {
+            font-size: 16px !important;
+            padding-left: 20px !important;
+        }
+    }
+    .skills .padre {
+        padding-left: 0;
+        width: 350px;
+        height: 350px;
+    }
+    .logo-skill {
+        width: 350px !important;
+    }
+    .skills .hijo {
+        width: 348px !important;
+    }
+    .padre {
+        margin-top: 20px;
+        .html{ height:118px;}
+        .css{ height:90px;}
+        .js{ height:69px;}
+        .bootstrap{ height:55px;}
+        .jquery{ height:14px;}
+    }
+    .skills .fill-skills {
+        height: 350px;
+    }
+    
 }
+
+@media screen and (max-width: 950px) {
+    .container {
+        width: 80% !important;
+    }
+}
+
 @media screen and (max-width: 900px){
     .list-portfolio{
         width: 50%;
@@ -38,7 +88,15 @@
     .portfolio-item img {
         left: -23px;
     }
+    .skills .list-skills li {
+        i {
+            padding-left: 0 !important;
+        }
+    }
 }
+
+
+
 @media screen and (max-width: 784px){
     .skills .row>div{
         width: 100% !important;
@@ -51,11 +109,28 @@
             width: 200px;
         }
     }
-    .skills .padre, .skills .hijo{
-        width: 500px !important;
+    .skills .list-skills li {
+        i {
+            font-size: 35px !important;
+            padding-left: 0px !important;
+        }
+        h4 {
+            font-size: 14px !important;
+            padding-left: 35px !important;
+            display: block;
+            padding-top: 0;
+        }
+    }
+    .skills .list-skills li {
+        margin-bottom: 49px;
+    }
+    .skills-left, .skills-right {
+        width: 100% !important;
     }
     .skills .padre {
         margin: 0 auto;
+        text-align: center;
+        width: 350px !important;
     }
     .skills h4{
         padding-left: 20px;
@@ -66,7 +141,22 @@
     .portfolio-item img {
         left: -33px;
     }
+    .skills .list-skills li {
+        padding-left: 30px;
+    }
+    
+    .about-left, .about-right {
+        width: 100%;
+    }
+    .img-about {
+        width: 30%;
+    }
+    .contact .contact-container.expand-contact {
+        width: 93%;
+    }
 }
+
+
 @media screen and (max-width: 700px) {
     #nombre {
         padding: 50px 0px;
@@ -115,22 +205,108 @@
     }
 }
 
+@media screen and (max-width: 604px){
+    
+    .skills .list-skills {
+        margin-left: 0;
+        li {
+            i {
+                font-size: 28px !important;
+                padding-left: 0px !important;
+            }
+            h4 {
+                font-size: 13px !important;
+                padding-left: 35px !important;
+                display: block;
+                padding-top: 0;
+            }
+        }
+    }
+    
+    .skills .padre {
+        padding-left: 0;
+        width: 280px !important;
+        height: 280px;
+    }
+    .logo-skill {
+        width: 280px !important;
+    }
+    .skills .hijo {
+        width: 278px !important;
+    }
+    .padre {
+        margin-top: 20px;
+        .html{ height:95px; padding: 0;}
+        .css{ height:72px; padding: 0;}
+        .js{ height:56px; padding: 0;}
+        .bootstrap{ height:44px; padding: 0;}
+        .jquery{ height:11px; padding: 0;}
+    }
+    .skills .fill-skills {
+        height: 280px;
+    }
+    p{
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .img-about {
+        width: 50%;
+    }
+    .contact .contact-container.expand-contact {
+        width: 100%;
+    }
+    .contact .feedback-input {
+        font-size: 15px;
+    }
+    .contact #form-div {
+        width: 80%;
+        float: none;
+        margin-left: -182px;
+        padding-bottom: 25px;
+    }
+    .feedback-input {
+        max-width: 100%;
+        max-height: 118px;
+    }
+    .portfolio-item img {
+        left: -20px;
+    }
+}
+
 @media screen and (max-width: 600px){
     .letra {
         font-size: 50px;
     }
+    #footer ul {
+        width: 73%;
+    }
 }
 
+@media screen and (max-width: 580px){
+    .contact #form-div {
+        margin-left: 30px;
+    }
+    #btn-blue {
+        font-size: 16px;
+    }
+}
+* {
+    outline: 1px solid rgba(255, 0, 0, 0.41);
+}
 @media screen and (max-width: 535px){
-    .list-portfolio{
-        padding: 10px 0px !important;
+    .skills .list-skills li {
+        display: inline-block !important;
+        padding-left: 0;
+        margin-bottom: 10px;
+        h4{
+            padding-left: 0 !important;
+            display: inline-block !important;
+        }
     }
-    .skills .padre img {
-        width: 350px;
-    }
-    .skills .padre, .skills .hijo{
-        width: 350px !important;
-        height: 350px !important;
+    .portfolio-item img {
+        left: -50px;
     }
 }
 
@@ -139,8 +315,18 @@
         width: 100%;
         padding: 10px 0px !important;
     }
+}
+
+@media screen and (max-width: 486px){
+    .contact #form-div {
+        left: -1%;
+        width: 85%;
+    }
     .portfolio-item img {
-        left: 0;
+        left: -27px;
+    }
+    .skills .list-skills li{
+        padding: 0;
     }
 }
 
@@ -151,8 +337,41 @@
     }
 }
 
+@media screen and (max-width: 433px){
+    #footer ul {
+        width: 90%;
+    }
+}
 @media screen and (max-width: 400px){
     .letra {
         font-size: 28px;
+    }
+}
+@media screen and (max-width: 397px){
+    .container {
+        width: 90% !important;
+    }
+    .skills .list-skills {
+        margin-left: 70px;
+    }
+    #footer ul {
+        width: 100%;
+    }
+    .portfolio-item img {
+        left: -42px;
+    }
+}
+@media screen and (max-width: 360px){
+    .container {
+        width: 95% !important;
+    }
+    .skills .list-skills {
+        margin-left: 60px;
+    }
+    .contact #form-div {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 89%;
+        left: -3%;
     }
 }
