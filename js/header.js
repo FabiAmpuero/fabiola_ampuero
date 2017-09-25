@@ -25,8 +25,8 @@ function init() {
     
     var heightWindow = $(window).height();
     var widthWindow = $(window).width();
-    $("header").css("height",heightWindow);
-    $(".fondo").css("height",heightWindow);
+    /*$("header").css("height",heightWindow);
+    $(".fondo").css("height",heightWindow);*/
     $("#contact").css("height",heightWindow+200);
     alto = heightWindow-100;
     $(".hero").css("padding-top",alto/2);
@@ -227,6 +227,7 @@ function countCoffee(){
 // PORTAFOLIO
 $('.expand').click(function(){
     var portid = $(this).attr('rel');
+    // almacena el nombre del proyecto
     $('html,body').animate({scrollTop: $('#showcase').offset().top-100}, 500, 'easeInOutQuad');
     
     for(var i in portafolios){
